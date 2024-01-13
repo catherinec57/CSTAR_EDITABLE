@@ -16,21 +16,20 @@
 ```
 
 ## Preferred Tools
-- KiCAD for PCB development
+- KiCAD 7 for PCB development
 - Visual Studio Code / PlatformIO for code development
 - Git CLI / GitHub Desktop for managing Git
 
 ## Branches
-> To isolate conflicts for schematics and code, we use two branches to actually develop off of depending on discipline
-- `develop/ecad` is for schematic development, please create PR's into this branch for schematics and operate in this branch for layout
-- `develop/src` is for code development, please create PR's into this branch for features
+- Main branch contains all tested/verified work
+- Development work is contained on separate branches
 
 ## References
 - Schematics + Components (WIP)
 
 ## Practice Good Git Hygiene!
 1. Only commit files you intended to change
-2. Create branches for each feature, and larger branches for each development effort (i.e. ```develop/*```)
+2. Create branches for each feature
 3. Check your branch before starting work
 4. Pull frequently to avoid conflicts
 5. Make Pull Requests when you are ready to merge into a larger branch
