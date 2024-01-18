@@ -1,5 +1,5 @@
 # <PROJECT NAME>
-<ADD BLURB ABOUT PROJECT>
+<CSTAR Generate Repository>
 
 ## Directory Structure:
 ```
