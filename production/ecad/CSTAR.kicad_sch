@@ -8,6 +8,23 @@
   )
 
 
+  (wire (pts (xy 144.78 125.73) (xy 144.78 96.52))
+    (stroke (width 0) (type default))
+    (uuid 9dfdd5ba-4356-4928-883b-e4fe58ee4638)
+  )
+  (wire (pts (xy 214.63 146.05) (xy 161.29 146.05))
+    (stroke (width 0) (type default))
+    (uuid 9f9b26dc-47cb-405f-ae51-c37865657434)
+  )
+  (wire (pts (xy 214.63 96.52) (xy 214.63 146.05))
+    (stroke (width 0) (type default))
+    (uuid a98cc907-0d89-4060-8905-6619482f832c)
+  )
+  (wire (pts (xy 144.78 96.52) (xy 214.63 96.52))
+    (stroke (width 0) (type default))
+    (uuid b9f38c0f-51df-4b30-9635-f87773f87100)
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
