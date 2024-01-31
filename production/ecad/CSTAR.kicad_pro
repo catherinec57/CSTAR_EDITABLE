@@ -326,6 +326,26 @@
     [
       "cd9fa943-c6eb-468b-990c-ea873c442553",
       ""
+    ],
+    [
+      "0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e",
+      "CSTAR-Power"
+    ],
+    [
+      "3e924a05-61af-4a8a-bc82-0b26814a19c7",
+      "CSTAR-Lidar"
+    ],
+    [
+      "526f560a-57be-4237-943d-d2bd06db7162",
+      "CSTAR-Drive"
+    ],
+    [
+      "ab376fb8-b3cc-4961-835f-6ea621157706",
+      "CSTAR-MCU"
+    ],
+    [
+      "2cc69299-a9af-44e6-bcb8-323a1f2cc303",
+      "CSTAR-Audio"
     ]
   ],
   "text_variables": {}
