@@ -21,6 +21,7 @@ __MACOSX
 */#auto_saved_files#
 sym-lib-table
 _autosave-*
+_autosave-cstar-mcu.kicad_sch
 *.tmp
 *-save.pro
 *-save.kicad_pcb
