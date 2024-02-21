@@ -25,6 +25,23 @@
     )
   )
 
+  (sheet (at 191.77 99.06) (size 18.415 15.24) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 222d3537-e437-4ced-92e0-9423c8895d91)
+    (property "Sheetname" "CSTAR-IO" (at 191.77 98.3484 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "cstar-io.kicad_sch" (at 191.77 114.8846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553" (page "7"))
+      )
+    )
+  )
+
   (sheet (at 110.49 98.425) (size 51.435 53.34) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
