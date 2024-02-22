@@ -1745,7 +1745,8 @@
     (effects (font (size 6 6) bold) (justify left bottom))
     (uuid 4276b0e1-970a-4943-8a76-4438fdd4aef7)
   )
-  (text "Protection Circutry to be added" (at 205.74 193.04 0)
+  (text "Protection Circutry:  Three 5A Circuit Protection Fuses were added to the 12V, 5V, and 3v3 power rails."
+    (at 17.78 254 0)
     (effects (font (size 6 6) bold (color 255 2 31 1)) (justify left bottom))
     (uuid d938571d-6e19-427f-93ed-90a3e90c8199)
   )
