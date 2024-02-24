@@ -1324,13 +1324,13 @@
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (pin "1" (uuid a5a6d778-5df0-461e-a6f7-00d6d3368ea7))
-    (pin "4" (uuid c2f40857-62fd-497c-b9a2-e109ee0c19cd))
-    (pin "7" (uuid bebbda40-69f4-4374-bd09-3184d162c48b))
-    (pin "6" (uuid c43ef8a1-a9ad-4b96-bcf4-6788f4af028c))
-    (pin "3" (uuid 2176c4bf-4f34-400d-8c08-5b378a486fa0))
-    (pin "8" (uuid e0384294-2096-4cef-a838-d85c8266aef9))
-    (pin "5" (uuid f4b72aaa-d9ab-4afb-89ef-9ef1c7ac0176))
     (pin "2" (uuid 29df4c80-1a7f-497b-83d1-7b8b7418234b))
+    (pin "3" (uuid 2176c4bf-4f34-400d-8c08-5b378a486fa0))
+    (pin "4" (uuid c2f40857-62fd-497c-b9a2-e109ee0c19cd))
+    (pin "5" (uuid f4b72aaa-d9ab-4afb-89ef-9ef1c7ac0176))
+    (pin "6" (uuid c43ef8a1-a9ad-4b96-bcf4-6788f4af028c))
+    (pin "7" (uuid bebbda40-69f4-4374-bd09-3184d162c48b))
+    (pin "8" (uuid e0384294-2096-4cef-a838-d85c8266aef9))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
@@ -1405,10 +1405,10 @@
     (property "Datasheet" "~" (at 122.555 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid 42d44520-cc6f-4686-9757-23755462f02d))
     (pin "2" (uuid d240bc70-81ec-4956-bcfb-0fb410d19a7d))
     (pin "3" (uuid 5c0f8d5d-b549-4147-a69b-9c95f17e5af5))
     (pin "4" (uuid 4d5357d3-4c79-4b23-8a41-1d6d3ec91a4a))
-    (pin "1" (uuid 42d44520-cc6f-4686-9757-23755462f02d))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
@@ -1468,8 +1468,8 @@
     (property "Datasheet" "~" (at 204.47 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 9e1edffd-b83e-4bf6-9ad4-2890deb52e7c))
     (pin "1" (uuid e056838a-f19d-4616-9a06-95efd406754a))
+    (pin "2" (uuid 9e1edffd-b83e-4bf6-9ad4-2890deb52e7c))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
@@ -1629,8 +1629,8 @@
     (property "Datasheet" "691137710002" (at 193.04 74.295 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (pin "2" (uuid db89cfb5-79b4-47dc-b8b3-d50899356cb4))
     (pin "1" (uuid 63349c55-9eca-417a-9041-87c835d525e8))
+    (pin "2" (uuid db89cfb5-79b4-47dc-b8b3-d50899356cb4))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
@@ -1680,8 +1680,8 @@
     (property "Datasheet" "~" (at 198.755 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 77cedb98-223e-4051-b072-8e0082c095c0))
     (pin "1" (uuid 4d12c602-8608-4a1d-a0e2-bf4326fe0eb0))
+    (pin "2" (uuid 77cedb98-223e-4051-b072-8e0082c095c0))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
@@ -1766,8 +1766,8 @@
     (property "Datasheet" "~" (at 198.755 52.705 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid fdd7ef95-5bc6-401a-aebd-7c9b4f1f6df7))
     (pin "1" (uuid 0b3856ef-72ca-43ab-99b5-793c714f450d))
+    (pin "2" (uuid fdd7ef95-5bc6-401a-aebd-7c9b4f1f6df7))
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"

@@ -2138,6 +2138,11 @@
           (reference "#PWR022") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR022") (unit 1)
+        )
+      )
     )
   )
 
@@ -2161,6 +2166,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "C1") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "C1") (unit 1)
         )
       )
@@ -2190,6 +2200,11 @@
           (reference "R6") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R6") (unit 1)
+        )
+      )
     )
   )
 
@@ -2216,6 +2231,11 @@
           (reference "R14") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R14") (unit 1)
+        )
+      )
     )
   )
 
@@ -2239,6 +2259,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "R22") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "R22") (unit 1)
         )
       )
@@ -2269,6 +2294,11 @@
           (reference "Q2") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "Q2") (unit 1)
+        )
+      )
     )
   )
 
@@ -2291,6 +2321,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR019") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR019") (unit 1)
         )
       )
@@ -2317,6 +2352,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "C5") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "C5") (unit 1)
         )
       )
@@ -2373,6 +2413,11 @@
           (reference "U2") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "U2") (unit 1)
+        )
+      )
     )
   )
 
@@ -2396,6 +2441,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "R9") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "R9") (unit 1)
         )
       )
@@ -2425,6 +2475,11 @@
           (reference "R18") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R18") (unit 1)
+        )
+      )
     )
   )
 
@@ -2448,6 +2503,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "SW1") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "SW1") (unit 1)
         )
       )
@@ -2477,6 +2537,11 @@
           (reference "R17") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R17") (unit 1)
+        )
+      )
     )
   )
 
@@ -2502,6 +2567,11 @@
           (reference "#PWR026") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR026") (unit 1)
+        )
+      )
     )
   )
 
@@ -2524,6 +2594,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR016") (unit 1)
         )
       )
@@ -2553,6 +2628,11 @@
           (reference "R20") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R20") (unit 1)
+        )
+      )
     )
   )
 
@@ -2578,6 +2658,11 @@
           (reference "#PWR03") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR03") (unit 1)
+        )
+      )
     )
   )
 
@@ -2600,6 +2685,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR027") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR027") (unit 1)
         )
       )
@@ -2629,6 +2719,11 @@
           (reference "R23") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R23") (unit 1)
+        )
+      )
     )
   )
 
@@ -2651,6 +2746,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR025") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR025") (unit 1)
         )
       )
@@ -2677,6 +2777,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "R19") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "R19") (unit 1)
         )
       )
@@ -2743,6 +2848,11 @@
           (reference "U3") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "U3") (unit 1)
+        )
+      )
     )
   )
 
@@ -2769,6 +2879,11 @@
           (reference "R2") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R2") (unit 1)
+        )
+      )
     )
   )
 
@@ -2791,6 +2906,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR034") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR034") (unit 1)
         )
       )
@@ -2820,6 +2940,11 @@
           (reference "R7") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R7") (unit 1)
+        )
+      )
     )
   )
 
@@ -2845,6 +2970,11 @@
           (reference "#PWR07") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR07") (unit 1)
+        )
+      )
     )
   )
 
@@ -2867,6 +2997,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR028") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR028") (unit 1)
         )
       )
@@ -2933,6 +3068,11 @@
           (reference "U1") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "U1") (unit 1)
+        )
+      )
     )
   )
 
@@ -2960,6 +3100,11 @@
           (reference "Q1") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "Q1") (unit 1)
+        )
+      )
     )
   )
 
@@ -2982,6 +3127,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR032") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR032") (unit 1)
         )
       )
@@ -3011,6 +3161,11 @@
           (reference "R25") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R25") (unit 1)
+        )
+      )
     )
   )
 
@@ -3034,6 +3189,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "SW3") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "SW3") (unit 1)
         )
       )
@@ -3063,6 +3223,11 @@
           (reference "C8") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "C8") (unit 1)
+        )
+      )
     )
   )
 
@@ -3089,6 +3254,11 @@
           (reference "R21") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R21") (unit 1)
+        )
+      )
     )
   )
 
@@ -3111,6 +3281,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR018") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR018") (unit 1)
         )
       )
@@ -3140,6 +3315,11 @@
           (reference "C4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "C4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3166,6 +3346,11 @@
           (reference "SW2") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "SW2") (unit 1)
+        )
+      )
     )
   )
 
@@ -3188,6 +3373,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR09") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR09") (unit 1)
         )
       )
@@ -3232,6 +3422,11 @@
           (reference "J2") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "J2") (unit 1)
+        )
+      )
     )
   )
 
@@ -3258,6 +3453,11 @@
           (reference "SW4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "SW4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3280,6 +3480,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR01") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR01") (unit 1)
         )
       )
@@ -3309,6 +3514,11 @@
           (reference "C7") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "C7") (unit 1)
+        )
+      )
     )
   )
 
@@ -3331,6 +3541,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR029") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR029") (unit 1)
         )
       )
@@ -3359,6 +3574,11 @@
           (reference "#PWR024") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR024") (unit 1)
+        )
+      )
     )
   )
 
@@ -3384,6 +3604,11 @@
           (reference "#PWR021") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR021") (unit 1)
+        )
+      )
     )
   )
 
@@ -3406,6 +3631,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR033") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR033") (unit 1)
         )
       )
@@ -3435,6 +3665,11 @@
           (reference "R13") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R13") (unit 1)
+        )
+      )
     )
   )
 
@@ -3461,6 +3696,11 @@
           (reference "R26") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R26") (unit 1)
+        )
+      )
     )
   )
 
@@ -3483,6 +3723,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR013") (unit 1)
         )
       )
@@ -3512,6 +3757,11 @@
           (reference "R3") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R3") (unit 1)
+        )
+      )
     )
   )
 
@@ -3534,6 +3784,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR010") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR010") (unit 1)
         )
       )
@@ -3562,6 +3817,11 @@
           (reference "#PWR05") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR05") (unit 1)
+        )
+      )
     )
   )
 
@@ -3584,6 +3844,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR06") (unit 1)
         )
       )
@@ -3613,6 +3878,11 @@
           (reference "R4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3638,6 +3908,11 @@
           (reference "#PWR012") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR012") (unit 1)
+        )
+      )
     )
   )
 
@@ -3660,6 +3935,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR015") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR015") (unit 1)
         )
       )
@@ -3689,6 +3969,11 @@
           (reference "C6") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "C6") (unit 1)
+        )
+      )
     )
   )
 
@@ -3711,6 +3996,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR030") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR030") (unit 1)
         )
       )
@@ -3741,6 +4031,11 @@
           (reference "Q4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "Q4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3765,6 +4060,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "Q3") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "Q3") (unit 1)
         )
       )
@@ -3794,6 +4094,11 @@
           (reference "R15") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R15") (unit 1)
+        )
+      )
     )
   )
 
@@ -3817,6 +4122,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "R1") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "R1") (unit 1)
         )
       )
@@ -3846,6 +4156,11 @@
           (reference "C3") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "C3") (unit 1)
+        )
+      )
     )
   )
 
@@ -3868,6 +4183,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR020") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR020") (unit 1)
         )
       )
@@ -3897,6 +4217,11 @@
           (reference "R8") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R8") (unit 1)
+        )
+      )
     )
   )
 
@@ -3922,6 +4247,11 @@
           (reference "#PWR017") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR017") (unit 1)
+        )
+      )
     )
   )
 
@@ -3944,6 +4274,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR08") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR08") (unit 1)
         )
       )
@@ -3973,6 +4308,11 @@
           (reference "J4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "J4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3995,6 +4335,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR031") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR031") (unit 1)
         )
       )
@@ -4051,6 +4396,11 @@
           (reference "U4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "U4") (unit 1)
+        )
+      )
     )
   )
 
@@ -4076,6 +4426,11 @@
           (reference "#PWR04") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR04") (unit 1)
+        )
+      )
     )
   )
 
@@ -4098,6 +4453,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR02") (unit 1)
         )
       )
@@ -4127,6 +4487,11 @@
           (reference "R16") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R16") (unit 1)
+        )
+      )
     )
   )
 
@@ -4150,6 +4515,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "C2") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "C2") (unit 1)
         )
       )
@@ -4179,6 +4549,11 @@
           (reference "R5") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R5") (unit 1)
+        )
+      )
     )
   )
 
@@ -4204,6 +4579,11 @@
           (reference "#PWR011") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "#PWR011") (unit 1)
+        )
+      )
     )
   )
 
@@ -4226,6 +4606,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR023") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR023") (unit 1)
         )
       )
@@ -4255,6 +4640,11 @@
           (reference "R12") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R12") (unit 1)
+        )
+      )
     )
   )
 
@@ -4281,6 +4671,11 @@
           (reference "R10") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R10") (unit 1)
+        )
+      )
     )
   )
 
@@ -4303,6 +4698,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "#PWR014") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "#PWR014") (unit 1)
         )
       )
@@ -4347,6 +4747,11 @@
           (reference "J1") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "J1") (unit 1)
+        )
+      )
     )
   )
 
@@ -4373,6 +4778,11 @@
           (reference "R24") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
+          (reference "R24") (unit 1)
+        )
+      )
     )
   )
 
@@ -4396,6 +4806,11 @@
     (instances
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
+          (reference "R11") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
           (reference "R11") (unit 1)
         )
       )
