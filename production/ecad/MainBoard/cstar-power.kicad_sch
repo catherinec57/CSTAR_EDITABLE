@@ -2326,6 +2326,11 @@
     (effects (font (size 3 3) (thickness 0.6) bold) (justify left bottom))
     (uuid b70e6db0-f8ad-4551-9caa-473155136bc1)
   )
+  (text "Add large resistors for LEDs for proper power dissipation in layout\n\n"
+    (at 24.13 274.32 0)
+    (effects (font (size 3 3) (thickness 0.6) bold) (justify left bottom))
+    (uuid ba589f18-1ddf-4ea5-aff9-8ba598e1496f)
+  )
   (text "Protection Circutry: \nThree 5A Protection Fuses to the 12V, 5V, and 3v3 power rails.\nTVS Diode\n"
     (at 24.13 264.16 0)
     (effects (font (size 3 3) bold (color 255 2 31 1)) (justify left bottom))
