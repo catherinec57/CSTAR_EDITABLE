@@ -5,6 +5,95 @@
   (paper "A4")
 
   (lib_symbols
+    (symbol "2024-02-24_22-47-34:MMSZ5231B-7-F" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "CR" (at 5.08 4.445 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Value" "MMSZ5231B-7-F" (at 5.08 -3.81 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Footprint" "SOD123_DIO" (at 0 0 0)
+        (effects (font (size 1.27 1.27) italic) hide)
+      )
+      (property "Datasheet" "MMSZ5231B-7-F" (at 0 0 0)
+        (effects (font (size 1.27 1.27) italic) hide)
+      )
+      (property "ki_locked" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "ki_keywords" "MMSZ5231B-7-F" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SOD123_DIO SOD123_DIO-M SOD123_DIO-L" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "MMSZ5231B-7-F_1_1"
+        (polyline
+          (pts
+            (xy 2.54 0)
+            (xy 3.4798 0)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.175 0)
+            (xy 3.81 0)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.81 -1.905)
+            (xy 6.35 0)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.81 1.905)
+            (xy 3.81 -1.905)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 6.35 -1.905)
+            (xy 6.35 1.905)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 6.35 0)
+            (xy 3.81 1.905)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 6.35 0)
+            (xy 7.62 0)
+          )
+          (stroke (width 0.2032) (type default))
+          (fill (type none))
+        )
+        (pin unspecified line (at 10.16 0 180) (length 2.54)
+          (name "" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at 0 0 0) (length 2.54)
+          (name "" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "691137710002-2CONN:691137710002" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 8.89 6.35 0)
         (effects (font (size 1.524 1.524)))
@@ -1077,14 +1166,14 @@
     )
   )
 
-  (junction (at 198.755 43.815) (diameter 0) (color 0 0 0 0)
-    (uuid 28f58c14-24c2-46a8-8126-d264b40c53ef)
+  (junction (at 199.39 41.91) (diameter 0) (color 0 0 0 0)
+    (uuid 13261b07-e767-4ebe-9c33-08b270a4aeaf)
+  )
+  (junction (at 199.39 60.96) (diameter 0) (color 0 0 0 0)
+    (uuid 1aaf1591-2de9-4d95-9bc9-5ee2654e1d4e)
   )
   (junction (at 208.915 53.34) (diameter 0) (color 0 0 0 0)
     (uuid 3f605ff0-57fa-4e48-9ac8-c01be9583472)
-  )
-  (junction (at 198.755 60.96) (diameter 0) (color 0 0 0 0)
-    (uuid 4951a514-85c8-467b-86fe-d02df7fe60e8)
   )
   (junction (at 204.47 60.96) (diameter 0) (color 0 0 0 0)
     (uuid 569d04a8-34ae-4f3f-9ff5-650250a2add0)
@@ -1098,6 +1187,9 @@
   (junction (at 239.395 58.42) (diameter 0) (color 0 0 0 0)
     (uuid bafce4aa-7a00-4134-97ea-337a87d6b227)
   )
+  (junction (at 194.31 41.91) (diameter 0) (color 0 0 0 0)
+    (uuid c1d80d4f-9f17-49f2-ab5e-f792dda827ea)
+  )
   (junction (at 208.915 60.96) (diameter 0) (color 0 0 0 0)
     (uuid c4147527-1a5b-4fbb-8b74-d5537ec85119)
   )
@@ -1105,13 +1197,21 @@
     (uuid d13828c7-96b5-4075-b312-a407422bf0ee)
   )
 
-  (wire (pts (xy 198.755 43.815) (xy 198.755 48.895))
+  (wire (pts (xy 199.39 41.91) (xy 208.915 41.91))
     (stroke (width 0) (type default))
-    (uuid 07fb92dd-ba9e-402c-b24b-f7791e827ca6)
+    (uuid 0e6309fe-7626-486c-96ad-d3e6f6ba50c3)
+  )
+  (wire (pts (xy 194.31 41.91) (xy 199.39 41.91))
+    (stroke (width 0) (type default))
+    (uuid 0fc22ea2-762e-48c6-8310-eae1c807f9e8)
   )
   (wire (pts (xy 193.04 71.755) (xy 198.755 71.755))
     (stroke (width 0) (type default))
     (uuid 13386bb1-3a64-4694-86a3-288d46fd9159)
+  )
+  (wire (pts (xy 194.31 39.37) (xy 194.31 41.91))
+    (stroke (width 0) (type default))
+    (uuid 1537cb03-8f2f-45d6-be1d-92a84706a2b9)
   )
   (wire (pts (xy 108.585 86.995) (xy 108.585 48.895))
     (stroke (width 0) (type default))
@@ -1124,6 +1224,10 @@
   (wire (pts (xy 204.47 60.96) (xy 208.915 60.96))
     (stroke (width 0) (type default))
     (uuid 27fbb9a5-485d-44af-a16a-49062df56cbe)
+  )
+  (wire (pts (xy 199.39 41.91) (xy 199.39 46.99))
+    (stroke (width 0) (type default))
+    (uuid 297ffe64-66dc-403c-ae5f-035033167570)
   )
   (polyline (pts (xy 147.32 112.395) (xy 147.32 15.875))
     (stroke (width 0.5) (type default))
@@ -1160,6 +1264,10 @@
     (uuid 5d447de4-ffd5-44e2-9e39-ba9337a96f03)
   )
 
+  (wire (pts (xy 199.39 57.15) (xy 199.39 60.96))
+    (stroke (width 0) (type default))
+    (uuid 5f749627-86c2-43ea-b217-92d6e564585a)
+  )
   (wire (pts (xy 198.755 74.295) (xy 193.04 74.295))
     (stroke (width 0) (type default))
     (uuid 62309556-269b-4a28-b9db-173561d2f658)
@@ -1182,9 +1290,9 @@
     (stroke (width 0) (type default))
     (uuid 7fcdc294-05ea-401e-88e1-b5f00fec0976)
   )
-  (wire (pts (xy 198.755 43.815) (xy 196.85 43.815))
+  (wire (pts (xy 199.39 60.96) (xy 204.47 60.96))
     (stroke (width 0) (type default))
-    (uuid 81e5ecd9-25a2-4134-8dcd-ef9a61fe4e10)
+    (uuid 801ea0b9-154b-4646-87aa-b5c98f0cea9d)
   )
   (wire (pts (xy 108.585 48.895) (xy 117.475 48.895))
     (stroke (width 0) (type default))
@@ -1195,21 +1303,17 @@
     (uuid 8d6ebc86-8332-4731-8d43-854355dedd4d)
   )
 
-  (wire (pts (xy 208.915 53.34) (xy 208.915 43.815))
+  (wire (pts (xy 208.915 53.34) (xy 208.915 41.91))
     (stroke (width 0) (type default))
     (uuid 904ad95c-3ed2-4d1b-9bc6-ab7a855de361)
   )
-  (wire (pts (xy 208.915 43.815) (xy 198.755 43.815))
+  (wire (pts (xy 186.69 41.91) (xy 194.31 41.91))
     (stroke (width 0) (type default))
     (uuid 9182dc75-54ba-4dfd-9412-0e21073d6ab8)
   )
   (wire (pts (xy 84.455 46.355) (xy 117.475 46.355))
     (stroke (width 0) (type default))
     (uuid 93d872ab-495d-43d8-8b27-a6846302473a)
-  )
-  (wire (pts (xy 198.755 56.515) (xy 198.755 60.96))
-    (stroke (width 0) (type default))
-    (uuid 96e977df-4777-489b-ac6a-f4d901438cd5)
   )
   (wire (pts (xy 198.755 60.96) (xy 198.755 71.755))
     (stroke (width 0) (type default))
@@ -1244,7 +1348,7 @@
     (uuid e3302467-bec4-463a-951d-8104a9bce6f9)
   )
 
-  (wire (pts (xy 198.755 60.96) (xy 204.47 60.96))
+  (wire (pts (xy 198.755 60.96) (xy 199.39 60.96))
     (stroke (width 0) (type default))
     (uuid ed1593ba-68e0-4f40-9192-b3050d09f341)
   )
@@ -1286,11 +1390,15 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ba82381c-95c9-4030-af7b-8944669ba689)
   )
+  (text "Zener Diode" (at 175.26 54.61 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid f5612a6e-498b-4158-a4de-da4c9e13be17)
+  )
 
-  (global_label "BATT_IN" (shape input) (at 196.85 43.815 180) (fields_autoplaced)
+  (global_label "BATT_IN" (shape input) (at 186.69 41.91 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid aa09d92e-5e75-4cf6-a697-c8f462d164da)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 186.6681 43.815 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 176.5081 41.91 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -1332,6 +1440,11 @@
     (pin "5" (uuid f4b72aaa-d9ab-4afb-89ef-9ef1c7ac0176))
     (pin "2" (uuid 29df4c80-1a7f-497b-83d1-7b8b7418234b))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "Q8") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "Q8") (unit 1)
@@ -1357,9 +1470,40 @@
     )
     (pin "1" (uuid a14f5d2e-de29-4d81-8a70-fa9b7039af19))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR037") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR037") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "2024-02-24_22-47-34:MMSZ5231B-7-F") (at 199.39 57.15 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 2b52a218-7135-4422-ad28-0666b7bdd5ad)
+    (property "Reference" "CR1" (at 180.34 48.26 90)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "MMSZ5231B-7-F" (at 195.58 50.8 90)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Footprint" "SOD123_DIO" (at 199.39 57.15 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "MMSZ5231B-7-F" (at 199.39 57.15 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid d2d0d4e6-a7a7-429d-a23d-5450ad6d0b30))
+    (pin "2" (uuid 812fd885-ed3c-440c-bab9-e61a7408fbf3))
+    (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "CR1") (unit 1)
         )
       )
     )
@@ -1382,6 +1526,11 @@
     )
     (pin "1" (uuid bf37b95a-13c6-4ab6-a5c0-b5cb6686a415))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR040") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR040") (unit 1)
@@ -1410,6 +1559,11 @@
     (pin "4" (uuid 4d5357d3-4c79-4b23-8a41-1d6d3ec91a4a))
     (pin "1" (uuid 42d44520-cc6f-4686-9757-23755462f02d))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "J5") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "J5") (unit 1)
@@ -1437,6 +1591,11 @@
     (pin "2" (uuid b613b40d-eaa9-44b1-b864-e73e496b6846))
     (pin "3" (uuid f49cf25f-3a9e-4854-a26b-34d8254e2763))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "Q2") (unit 1)
+        )
+      )
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
           (reference "Q2") (unit 1)
@@ -1448,6 +1607,31 @@
         )
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "Q7") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 194.31 39.37 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 57513d5a-b484-4290-a5f8-4ae6b3e2b42d)
+    (property "Reference" "TP1" (at 196.85 34.798 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BATT_IN" (at 196.85 37.338 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 199.39 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 199.39 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b2f97775-386d-46fe-83ec-94026269a112))
+    (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -1471,6 +1655,11 @@
     (pin "2" (uuid 9e1edffd-b83e-4bf6-9ad4-2890deb52e7c))
     (pin "1" (uuid e056838a-f19d-4616-9a06-95efd406754a))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "C11") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "C11") (unit 1)
@@ -1496,6 +1685,11 @@
     )
     (pin "1" (uuid a9eea0c6-41f0-4be5-ab93-c11691833d6e))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR039") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR039") (unit 1)
@@ -1521,6 +1715,11 @@
     )
     (pin "1" (uuid d795b8a7-3c13-4798-84c1-ec50a80da4a9))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR035") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR035") (unit 1)
@@ -1548,6 +1747,11 @@
     (pin "2" (uuid c3648c20-cc03-4e71-811a-86b8fc3b8d44))
     (pin "3" (uuid 98d28ea4-d5e5-4cec-b51b-f6475b62e993))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "Q2") (unit 1)
+        )
+      )
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
           (reference "Q2") (unit 1)
@@ -1581,6 +1785,11 @@
     )
     (pin "1" (uuid e1b4310d-24c3-4fe8-aee8-0f9e0bf61bb1))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR036") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR036") (unit 1)
@@ -1606,6 +1815,11 @@
     )
     (pin "1" (uuid fa9c8e94-96e6-4e6a-9325-c56c061c4c87))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR038") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR038") (unit 1)
@@ -1632,6 +1846,11 @@
     (pin "2" (uuid db89cfb5-79b4-47dc-b8b3-d50899356cb4))
     (pin "1" (uuid 63349c55-9eca-417a-9041-87c835d525e8))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "J1") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "J1") (unit 1)
@@ -1657,6 +1876,11 @@
     )
     (pin "1" (uuid df8910c9-81cb-46f9-a98e-8517c90db127))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "TP-VGSW") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "TP-VGSW") (unit 1)
@@ -1683,6 +1907,11 @@
     (pin "2" (uuid 77cedb98-223e-4051-b072-8e0082c095c0))
     (pin "1" (uuid 4d12c602-8608-4a1d-a0e2-bf4326fe0eb0))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "R28") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "R28") (unit 1)
@@ -1710,6 +1939,11 @@
     (pin "2" (uuid f796f70d-870b-4e90-993b-bbb3e1e8c855))
     (pin "3" (uuid d4b6b11c-b85d-4372-90c9-4ae4be313aa8))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "Q2") (unit 1)
+        )
+      )
       (project "cstar-mcu"
         (path "/889d461f-2713-421f-88e2-0d0ce2e66089"
           (reference "Q2") (unit 1)
@@ -1743,6 +1977,11 @@
     )
     (pin "1" (uuid 9f803fa7-4b94-46a7-95e6-eef55b8c9c4a))
     (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "#PWR045") (unit 1)
+        )
+      )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
           (reference "#PWR045") (unit 1)
@@ -1751,29 +1990,7 @@
     )
   )
 
-  (symbol (lib_id "Device:R_US") (at 198.755 52.705 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid fda48ba5-10e0-4fb9-9df5-7013d297476e)
-    (property "Reference" "R27" (at 200.66 51.435 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "2M" (at 200.66 53.975 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 199.771 52.959 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 198.755 52.705 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid fdd7ef95-5bc6-401a-aebd-7c9b4f1f6df7))
-    (pin "1" (uuid 0b3856ef-72ca-43ab-99b5-793c714f450d))
-    (instances
-      (project "CSTAR"
-        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "R27") (unit 1)
-        )
-      )
-    )
+  (sheet_instances
+    (path "/" (page "1"))
   )
 )
