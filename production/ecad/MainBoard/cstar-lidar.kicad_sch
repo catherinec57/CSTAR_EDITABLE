@@ -560,7 +560,7 @@
   (symbol (lib_id "power:GND") (at 133.35 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 17827c2b-ab90-482e-9ff6-86448a5e9f9a)
-    (property "Reference" "#PWR06" (at 133.35 92.71 0)
+    (property "Reference" "#PWR032" (at 133.35 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 133.35 91.44 0)
@@ -574,6 +574,11 @@
     )
     (pin "1" (uuid c11a4b43-9170-4b85-8672-d64e29d268b5))
     (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
+          (reference "#PWR032") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "#PWR06") (unit 1)
@@ -585,7 +590,7 @@
   (symbol (lib_id "power:GND") (at 118.11 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1b500555-0d5d-4142-9218-5ef23256715d)
-    (property "Reference" "#PWR04" (at 118.11 76.2 0)
+    (property "Reference" "#PWR027" (at 118.11 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 115.57 74.93 0)
@@ -601,7 +606,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -615,7 +620,7 @@
   (symbol (lib_id "power:+5V") (at 129.54 60.96 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35234c26-44ca-4d66-8586-d67fa4243392)
-    (property "Reference" "#PWR03" (at 133.35 60.96 0)
+    (property "Reference" "#PWR029" (at 133.35 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 125.73 60.96 90)
@@ -631,7 +636,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -645,7 +650,7 @@
   (symbol (lib_id "power:GND") (at 128.27 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4f2f0c96-6493-45ba-b53a-0cc5c70f37c4)
-    (property "Reference" "#PWR07" (at 128.27 88.9 0)
+    (property "Reference" "#PWR028" (at 128.27 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 128.27 87.63 0)
@@ -659,6 +664,11 @@
     )
     (pin "1" (uuid 4d218693-84e0-4e3b-8052-f13b25d84b5f))
     (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
+          (reference "#PWR028") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "#PWR07") (unit 1)
@@ -670,7 +680,7 @@
   (symbol (lib_id "power:GND") (at 113.03 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 61e3acae-45ef-4e80-9c55-54bda5b19c7d)
-    (property "Reference" "#PWR02" (at 113.03 74.93 0)
+    (property "Reference" "#PWR026" (at 113.03 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113.03 73.66 0)
@@ -684,6 +694,11 @@
     )
     (pin "1" (uuid 73a631c5-733d-4ff1-aee8-cf1b4c0710c2))
     (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
+          (reference "#PWR026") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "#PWR02") (unit 1)
@@ -695,7 +710,7 @@
   (symbol (lib_id "532610771:532610771") (at 147.32 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6290b66c-e8c5-4af9-b8de-6216191ac6bb)
-    (property "Reference" "J1" (at 156.21 71.12 0)
+    (property "Reference" "J7" (at 156.21 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "532610771" (at 156.21 73.66 0)
@@ -755,7 +770,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "J1") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -769,7 +784,7 @@
   (symbol (lib_id "power:+3V3") (at 129.54 63.5 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 82629f5d-7df7-41d4-aa35-10baaab1a51d)
-    (property "Reference" "#PWR01" (at 133.35 63.5 0)
+    (property "Reference" "#PWR030" (at 133.35 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 127 63.5 90)
@@ -785,7 +800,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -799,7 +814,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 101.6 73.66 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f95b655-3ab3-4fbe-942b-6cf0ed36bec5)
-    (property "Reference" "J2" (at 93.98 68.58 90)
+    (property "Reference" "J5" (at 93.98 68.58 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02_Pin" (at 93.98 71.12 90)
@@ -814,6 +829,11 @@
     (pin "1" (uuid c0a5bbea-3835-4142-85d4-9ebd08337a7f))
     (pin "2" (uuid c3b5dae3-cde2-44de-be56-8db3de451df0))
     (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
+          (reference "J5") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "J2") (unit 1)
@@ -825,7 +845,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 102.87 80.01 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9fea2b16-dc48-49d2-8482-e8c362028be1)
-    (property "Reference" "J3" (at 96.52 87.63 90)
+    (property "Reference" "J6" (at 96.52 87.63 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02_Pin" (at 96.52 90.17 90)
@@ -840,6 +860,11 @@
     (pin "1" (uuid df9d29de-6676-472f-92b4-403e08e1b6fb))
     (pin "2" (uuid 5f67d0fd-50fd-4651-ab32-4455217d8d0e))
     (instances
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
+          (reference "J6") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "J3") (unit 1)
@@ -851,7 +876,7 @@
   (symbol (lib_id "power:+5V") (at 129.54 71.12 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dc306e3e-e3b1-4439-9b95-b2c00ca050c4)
-    (property "Reference" "#PWR05" (at 133.35 71.12 0)
+    (property "Reference" "#PWR031" (at 133.35 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 125.73 71.12 90)
@@ -867,7 +892,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
       (project "cstar-lidar"

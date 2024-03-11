@@ -655,6 +655,11 @@
           (reference "J4") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "J28") (unit 1)
+        )
+      )
       (project "cstar-lidar"
         (path "/f4254b98-3297-4812-862b-6470cd23e6be"
           (reference "J1") (unit 1)
@@ -690,6 +695,11 @@
           (reference "#PWR010") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0126") (unit 1)
+        )
+      )
     )
   )
 
@@ -713,6 +723,11 @@
       (project "cstar-audio"
         (path "/16a488a1-12e9-4eb7-bbd0-d500eeb9c89a"
           (reference "#PWR05") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0127") (unit 1)
         )
       )
     )
@@ -742,6 +757,11 @@
           (reference "J3") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "J27") (unit 1)
+        )
+      )
     )
   )
 
@@ -767,6 +787,11 @@
       (project "cstar-audio"
         (path "/16a488a1-12e9-4eb7-bbd0-d500eeb9c89a"
           (reference "J2") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "J25") (unit 1)
         )
       )
     )
@@ -799,6 +824,11 @@
           (reference "#PWR011") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0125") (unit 1)
+        )
+      )
     )
   )
 
@@ -829,6 +859,11 @@
           (reference "#PWR011") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0128") (unit 1)
+        )
+      )
     )
   )
 
@@ -852,6 +887,11 @@
       (project "cstar-audio"
         (path "/16a488a1-12e9-4eb7-bbd0-d500eeb9c89a"
           (reference "#PWR09") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0130") (unit 1)
         )
       )
     )
@@ -882,6 +922,11 @@
       (project "MicBoard"
         (path "/35817364-8fba-4697-86bd-839867f6fab6"
           (reference "#PWR010") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "#PWR0129") (unit 1)
         )
       )
     )
@@ -951,6 +996,11 @@
       (project "cstar-audio"
         (path "/16a488a1-12e9-4eb7-bbd0-d500eeb9c89a"
           (reference "J1") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
+          (reference "J26") (unit 1)
         )
       )
       (project "cstar-lidar"
