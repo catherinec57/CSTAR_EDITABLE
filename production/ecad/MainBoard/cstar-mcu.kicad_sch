@@ -3340,7 +3340,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -3371,7 +3371,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C1") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -3402,7 +3402,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R6") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -3432,7 +3432,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR0112") (unit 1)
         )
       )
     )
@@ -3447,7 +3447,7 @@
     (property "Value" "TXB0104DR" (at 66.04 44.45 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "D14" (at 35.56 52.07 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:D14" (at 35.56 52.07 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "TXB0104DR" (at 35.56 52.07 0)
@@ -3475,7 +3475,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U5") (unit 1)
+          (reference "U4") (unit 1)
         )
       )
     )
@@ -3490,7 +3490,7 @@
     (property "Value" "ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 341.63 27.94 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "ESP32-WROOM-32UE_M113EH6400UH3Q0_:MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 341.63 63.5 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 341.63 63.5 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 341.63 63.5 0)
@@ -3599,7 +3599,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U6") (unit 1)
+          (reference "U9") (unit 1)
         )
       )
     )
@@ -3630,7 +3630,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R22") (unit 1)
+          (reference "R45") (unit 1)
         )
       )
     )
@@ -3692,7 +3692,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR095") (unit 1)
         )
       )
     )
@@ -3722,7 +3722,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR082") (unit 1)
         )
       )
     )
@@ -3753,7 +3753,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C5") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -3768,7 +3768,7 @@
     (property "Value" "Ultra_1" (at 90.17 20.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "4pinconnectors_footprint:CONN_B4B-XH-A_JST" (at 87.63 17.78 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:B4B_PH_K_S" (at 87.63 17.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 87.63 17.78 0)
@@ -3786,7 +3786,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J5") (unit 1)
+          (reference "J21") (unit 1)
         )
       )
     )
@@ -3801,7 +3801,7 @@
     (property "Value" "CP2102N-A01-GQFN28" (at 82.55 142.24 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "QFN28_5X5_SIL" (at 49.53 149.86 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:SW_1825910-6-4" (at 49.53 149.86 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "CP2102N-A01-GQFN28" (at 49.53 149.86 0)
@@ -3844,7 +3844,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U2") (unit 1)
+          (reference "U5") (unit 1)
         )
       )
     )
@@ -3875,7 +3875,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R9") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -3905,7 +3905,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -3920,7 +3920,7 @@
     (property "Value" "SW_Push" (at 110.49 261.62 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "switch:SW_1825910-6-4" (at 111.76 260.35 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:SW_1825910-6-4" (at 111.76 260.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 111.76 260.35 0)
@@ -3967,7 +3967,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C12") (unit 1)
+          (reference "C37") (unit 1)
         )
       )
     )
@@ -3998,7 +3998,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R17") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
     )
@@ -4028,7 +4028,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR087") (unit 1)
         )
       )
     )
@@ -4059,7 +4059,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R20") (unit 1)
+          (reference "R41") (unit 1)
         )
       )
     )
@@ -4089,7 +4089,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -4119,7 +4119,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -4149,7 +4149,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -4180,7 +4180,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R23") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
     )
@@ -4210,7 +4210,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -4241,7 +4241,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R19") (unit 1)
+          (reference "R40") (unit 1)
         )
       )
     )
@@ -4271,7 +4271,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
       )
     )
@@ -4301,7 +4301,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR098") (unit 1)
         )
       )
     )
@@ -4316,7 +4316,7 @@
     (property "Value" "Ultra_2" (at 60.96 20.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "4pinconnectors_footprint:CONN_B4B-XH-A_JST" (at 58.42 17.78 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:B4B_PH_K_S" (at 58.42 17.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 58.42 17.78 0)
@@ -4334,7 +4334,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J6") (unit 1)
+          (reference "J19") (unit 1)
         )
       )
     )
@@ -4365,7 +4365,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R2") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -4395,7 +4395,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -4425,7 +4425,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR086") (unit 1)
         )
       )
     )
@@ -4456,7 +4456,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R7") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -4486,7 +4486,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR081") (unit 1)
         )
       )
     )
@@ -4516,7 +4516,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -4578,7 +4578,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR0115") (unit 1)
         )
       )
     )
@@ -4609,7 +4609,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R25") (unit 1)
+          (reference "R44") (unit 1)
         )
       )
     )
@@ -4639,7 +4639,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
@@ -4654,7 +4654,7 @@
     (property "Value" "ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 153.67 25.4 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "ESP32-WROOM-32UE_M113EH6400UH3Q0_:MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 153.67 60.96 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_" (at 153.67 60.96 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 153.67 60.96 0)
@@ -4763,7 +4763,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U1") (unit 1)
+          (reference "U6") (unit 1)
         )
       )
     )
@@ -4778,7 +4778,7 @@
     (property "Value" "SW_Push" (at 396.24 232.41 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "switch:SW_1825910-6-4" (at 397.51 231.14 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:SW_1825910-6-4" (at 397.51 231.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 397.51 231.14 0)
@@ -4794,7 +4794,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "SW3") (unit 1)
+          (reference "SW4") (unit 1)
         )
       )
     )
@@ -4825,7 +4825,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C8") (unit 1)
+          (reference "C34") (unit 1)
         )
       )
     )
@@ -4840,7 +4840,7 @@
     (property "Value" "TX connect" (at 95.25 31.75 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "2pins:CONN2_440054-2_TYC" (at 92.71 29.21 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 92.71 29.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 92.71 29.21 0)
@@ -4856,7 +4856,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J4") (unit 1)
+          (reference "J22") (unit 1)
         )
       )
     )
@@ -4887,7 +4887,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R21") (unit 1)
+          (reference "R43") (unit 1)
         )
       )
     )
@@ -4917,7 +4917,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR091") (unit 1)
         )
       )
     )
@@ -4948,7 +4948,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C4") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
     )
@@ -4963,7 +4963,7 @@
     (property "Value" "Ultra_4" (at 31.75 20.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "4pinconnectors_footprint:CONN_B4B-XH-A_JST" (at 29.21 17.78 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:B4B_PH_K_S" (at 29.21 17.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 29.21 17.78 0)
@@ -4981,7 +4981,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J8") (unit 1)
+          (reference "J17") (unit 1)
         )
       )
     )
@@ -4996,7 +4996,7 @@
     (property "Value" "SW_Push" (at 154.94 261.62 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "switch:SW_1825910-6-4" (at 156.21 260.35 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:SW_1825910-6-4" (at 156.21 260.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 156.21 260.35 0)
@@ -5042,7 +5042,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
@@ -5057,7 +5057,7 @@
     (property "Value" "USB_C_Receptacle_USB2.0" (at 355.6 146.05 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "USB4105GFA:GCT_USB4105GFA" (at 359.41 166.37 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:USBCONN-GCT_USB4105GFA" (at 359.41 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 359.41 166.37 0)
@@ -5088,7 +5088,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J2") (unit 1)
+          (reference "J24") (unit 1)
         )
       )
     )
@@ -5118,7 +5118,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -5133,7 +5133,7 @@
     (property "Value" "SW_Push" (at 344.17 234.95 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "switch:SW_1825910-6-4" (at 345.44 233.68 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:SW_1825910-6-4" (at 345.44 233.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 345.44 233.68 0)
@@ -5149,7 +5149,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "SW4") (unit 1)
+          (reference "SW3") (unit 1)
         )
       )
     )
@@ -5179,7 +5179,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -5194,7 +5194,7 @@
     (property "Value" "Ultra_3" (at 31.75 34.29 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "4pinconnectors_footprint:CONN_B4B-XH-A_JST" (at 29.21 31.75 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:B4B_PH_K_S" (at 29.21 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 29.21 31.75 0)
@@ -5212,7 +5212,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J7") (unit 1)
+          (reference "J18") (unit 1)
         )
       )
     )
@@ -5243,7 +5243,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C7") (unit 1)
+          (reference "C35") (unit 1)
         )
       )
     )
@@ -5273,7 +5273,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR0113") (unit 1)
         )
       )
     )
@@ -5303,7 +5303,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -5333,7 +5333,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -5348,7 +5348,7 @@
     (property "Value" "TXB0104DR" (at 247.65 41.91 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "D14" (at 217.17 49.53 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:D14" (at 217.17 49.53 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "TXB0104DR" (at 217.17 49.53 0)
@@ -5376,7 +5376,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U3") (unit 1)
+          (reference "U7") (unit 1)
         )
       )
     )
@@ -5406,7 +5406,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -5437,7 +5437,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R13") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -5468,7 +5468,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R26") (unit 1)
+          (reference "R42") (unit 1)
         )
       )
     )
@@ -5498,7 +5498,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR094") (unit 1)
         )
       )
     )
@@ -5529,7 +5529,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R3") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -5559,7 +5559,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -5589,7 +5589,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR074") (unit 1)
         )
       )
     )
@@ -5604,7 +5604,7 @@
     (property "Value" "RX connect" (at 64.77 30.48 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "2pins:CONN2_440054-2_TYC" (at 62.23 27.94 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 62.23 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 62.23 27.94 0)
@@ -5620,7 +5620,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J3") (unit 1)
+          (reference "J20") (unit 1)
         )
       )
     )
@@ -5650,7 +5650,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
     )
@@ -5680,7 +5680,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR080") (unit 1)
         )
       )
     )
@@ -5710,7 +5710,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -5741,7 +5741,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R4") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -5771,7 +5771,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR092") (unit 1)
         )
       )
     )
@@ -5801,7 +5801,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -5832,7 +5832,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C6") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
     )
@@ -5862,7 +5862,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR0116") (unit 1)
         )
       )
     )
@@ -5956,7 +5956,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
     )
@@ -5986,7 +5986,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR075") (unit 1)
         )
       )
     )
@@ -6017,7 +6017,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C9") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -6048,7 +6048,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R15") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
     )
@@ -6079,7 +6079,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C11") (unit 1)
+          (reference "C36") (unit 1)
         )
       )
     )
@@ -6110,7 +6110,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R1") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -6141,7 +6141,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C10") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -6172,7 +6172,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C3") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -6203,7 +6203,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R8") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -6233,7 +6233,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR090") (unit 1)
         )
       )
     )
@@ -6263,7 +6263,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR099") (unit 1)
         )
       )
     )
@@ -6293,7 +6293,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -6323,7 +6323,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR093") (unit 1)
         )
       )
     )
@@ -6353,7 +6353,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR0114") (unit 1)
         )
       )
     )
@@ -6368,7 +6368,7 @@
     (property "Value" "CP2102N-A01-GQFN28" (at 281.94 144.78 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "QFN28_5X5_SIL" (at 248.92 152.4 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:691137710002-2CONN" (at 248.92 152.4 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "CP2102N-A01-GQFN28" (at 248.92 152.4 0)
@@ -6411,7 +6411,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "U4") (unit 1)
+          (reference "U8") (unit 1)
         )
       )
     )
@@ -6441,7 +6441,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR0100") (unit 1)
         )
       )
     )
@@ -6471,7 +6471,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR089") (unit 1)
         )
       )
     )
@@ -6501,7 +6501,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR083") (unit 1)
         )
       )
     )
@@ -6532,7 +6532,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R16") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
     )
@@ -6563,7 +6563,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "C2") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -6594,7 +6594,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R5") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -6624,7 +6624,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
     )
@@ -6654,7 +6654,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
@@ -6685,7 +6685,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R12") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -6716,7 +6716,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R10") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -6746,7 +6746,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR096") (unit 1)
         )
       )
     )
@@ -6761,7 +6761,7 @@
     (property "Value" "USB_C_Receptacle_USB2.0" (at 158.75 143.51 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "USB4105GFA:GCT_USB4105GFA" (at 162.56 163.83 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:USBCONN-GCT_USB4105GFA" (at 162.56 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 162.56 163.83 0)
@@ -6792,7 +6792,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "J1") (unit 1)
+          (reference "J23") (unit 1)
         )
       )
     )
@@ -6823,7 +6823,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R24") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
     )
@@ -6854,7 +6854,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/ab376fb8-b3cc-4961-835f-6ea621157706"
-          (reference "R11") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )

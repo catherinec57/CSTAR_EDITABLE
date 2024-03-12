@@ -598,7 +598,7 @@
     (property "Value" "532610771" (at 226.06 101.6 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "532610771:MOLEX_532610771" (at 217.17 99.06 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:MOLEX_532610771" (at 217.17 99.06 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 217.17 99.06 0)
@@ -697,7 +697,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0126") (unit 1)
+          (reference "#PWR0118") (unit 1)
         )
       )
     )
@@ -727,7 +727,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0127") (unit 1)
+          (reference "#PWR0119") (unit 1)
         )
       )
     )
@@ -826,7 +826,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0125") (unit 1)
+          (reference "#PWR0117") (unit 1)
         )
       )
     )
@@ -861,7 +861,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0128") (unit 1)
+          (reference "#PWR0120") (unit 1)
         )
       )
     )
@@ -891,7 +891,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0130") (unit 1)
+          (reference "#PWR0122") (unit 1)
         )
       )
     )
@@ -926,7 +926,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/2cc69299-a9af-44e6-bcb8-323a1f2cc303"
-          (reference "#PWR0129") (unit 1)
+          (reference "#PWR0121") (unit 1)
         )
       )
     )
@@ -941,7 +941,7 @@
     (property "Value" "532610771" (at 88.9 104.14 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "532610771:MOLEX_532610771" (at 80.01 101.6 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:MOLEX_532610771" (at 80.01 101.6 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 80.01 101.6 0)

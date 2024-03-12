@@ -5,95 +5,6 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "2024-02-24_22-47-34:MMSZ5231B-7-F" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "CR" (at 5.08 4.445 0)
-        (effects (font (size 1.524 1.524)))
-      )
-      (property "Value" "MMSZ5231B-7-F" (at 5.08 -3.81 0)
-        (effects (font (size 1.524 1.524)))
-      )
-      (property "Footprint" "SOD123_DIO" (at 0 0 0)
-        (effects (font (size 1.27 1.27) italic) hide)
-      )
-      (property "Datasheet" "MMSZ5231B-7-F" (at 0 0 0)
-        (effects (font (size 1.27 1.27) italic) hide)
-      )
-      (property "ki_locked" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "ki_keywords" "MMSZ5231B-7-F" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SOD123_DIO SOD123_DIO-M SOD123_DIO-L" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MMSZ5231B-7-F_1_1"
-        (polyline
-          (pts
-            (xy 2.54 0)
-            (xy 3.4798 0)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.175 0)
-            (xy 3.81 0)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.81 -1.905)
-            (xy 6.35 0)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.81 1.905)
-            (xy 3.81 -1.905)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 6.35 -1.905)
-            (xy 6.35 1.905)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 6.35 0)
-            (xy 3.81 1.905)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 6.35 0)
-            (xy 7.62 0)
-          )
-          (stroke (width 0.2032) (type default))
-          (fill (type none))
-        )
-        (pin unspecified line (at 10.16 0 180) (length 2.54)
-          (name "" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin unspecified line (at 0 0 0) (length 2.54)
-          (name "" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "691137710002-2CONN:691137710002" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 8.89 6.35 0)
         (effects (font (size 1.524 1.524)))
@@ -1225,7 +1136,7 @@
     (stroke (width 0) (type default))
     (uuid 27fbb9a5-485d-44af-a16a-49062df56cbe)
   )
-  (wire (pts (xy 199.39 41.91) (xy 199.39 46.99))
+  (wire (pts (xy 199.39 41.91) (xy 199.39 48.26))
     (stroke (width 0) (type default))
     (uuid 297ffe64-66dc-403c-ae5f-035033167570)
   )
@@ -1264,9 +1175,9 @@
     (uuid 5d447de4-ffd5-44e2-9e39-ba9337a96f03)
   )
 
-  (wire (pts (xy 199.39 57.15) (xy 199.39 60.96))
+  (wire (pts (xy 199.39 55.88) (xy 199.39 60.96))
     (stroke (width 0) (type default))
-    (uuid 5f749627-86c2-43ea-b217-92d6e564585a)
+    (uuid 6099186c-b7ed-4308-a67f-c6b25738c24c)
   )
   (wire (pts (xy 198.755 74.295) (xy 193.04 74.295))
     (stroke (width 0) (type default))
@@ -1425,7 +1336,7 @@
     (property "Value" "IRFHM9331TRPBF" (at 224.155 48.26 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "PG-TSDSON-8-902_INF" (at 208.915 53.34 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:IRFHM9331TRPBF" (at 208.915 53.34 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "IRFHM9331TRPBF" (at 208.915 53.34 0)
@@ -1447,7 +1358,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "Q12") (unit 1)
+          (reference "Q8") (unit 1)
         )
       )
     )
@@ -1477,38 +1388,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0134") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "2024-02-24_22-47-34:MMSZ5231B-7-F") (at 199.39 57.15 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2b52a218-7135-4422-ad28-0666b7bdd5ad)
-    (property "Reference" "CR1" (at 180.34 48.26 90)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "MMSZ5231B-7-F" (at 195.58 50.8 90)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Footprint" "SOD123_DIO" (at 199.39 57.15 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "MMSZ5231B-7-F" (at 199.39 57.15 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "1" (uuid d2d0d4e6-a7a7-429d-a23d-5450ad6d0b30))
-    (pin "2" (uuid 812fd885-ed3c-440c-bab9-e61a7408fbf3))
-    (instances
-      (project "cstar-io"
-        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
-          (reference "CR1") (unit 1)
-        )
-      )
-      (project "CSTAR"
-        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "CR3") (unit 1)
+          (reference "#PWR0126") (unit 1)
         )
       )
     )
@@ -1538,7 +1418,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0135") (unit 1)
+          (reference "#PWR0127") (unit 1)
         )
       )
     )
@@ -1553,7 +1433,7 @@
     (property "Value" "Conn_01x04_Socket" (at 124.46 46.355 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 122.555 43.815 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:B4B_PH_K_S" (at 122.555 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 122.555 43.815 0)
@@ -1611,7 +1491,7 @@
           (reference "Q2") (unit 1)
         )
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "Q11") (unit 1)
+          (reference "Q7") (unit 1)
         )
       )
     )
@@ -1626,7 +1506,7 @@
     (property "Value" "BATT_IN" (at 196.85 37.338 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 199.39 39.37 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 199.39 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 199.39 39.37 0)
@@ -1672,7 +1552,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "C34") (unit 1)
+          (reference "C38") (unit 1)
         )
       )
     )
@@ -1702,7 +1582,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0137") (unit 1)
+          (reference "#PWR0129") (unit 1)
         )
       )
     )
@@ -1732,7 +1612,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0131") (unit 1)
+          (reference "#PWR0123") (unit 1)
         )
       )
     )
@@ -1772,7 +1652,7 @@
           (reference "Q2") (unit 1)
         )
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "Q9") (unit 1)
+          (reference "Q5") (unit 1)
         )
       )
     )
@@ -1802,7 +1682,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0132") (unit 1)
+          (reference "#PWR0124") (unit 1)
         )
       )
     )
@@ -1832,7 +1712,38 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0133") (unit 1)
+          (reference "#PWR0125") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_US") (at 199.39 52.07 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c654d5a8-5368-479c-8584-acb5f06f82cd)
+    (property "Reference" "R28" (at 201.93 50.8 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "2M" (at 201.93 53.34 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 200.406 52.324 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 199.39 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c1367484-aa1f-43c8-a246-a5cd2bb14222))
+    (pin "2" (uuid 62e02ec9-4f30-44ae-b0ab-97ab76404257))
+    (instances
+      (project "cstar-io"
+        (path "/62407770-7c51-469d-bef6-28d7dddfde53"
+          (reference "R28") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
+          (reference "R47") (unit 1)
         )
       )
     )
@@ -1847,7 +1758,7 @@
     (property "Value" "691137710002" (at 184.15 67.31 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "CONN2_710002_WRE" (at 193.04 74.295 0)
+    (property "Footprint" "CSTAR-MainBoard-Footprints:691137710002-2CONN" (at 193.04 74.295 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "691137710002" (at 193.04 74.295 0)
@@ -1878,7 +1789,7 @@
     (property "Value" "TestPoint" (at 211.455 65.532 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 203.835 60.96 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 203.835 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 203.835 60.96 0)
@@ -1924,7 +1835,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "R64") (unit 1)
+          (reference "R46") (unit 1)
         )
       )
     )
@@ -1964,7 +1875,7 @@
           (reference "Q2") (unit 1)
         )
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "Q10") (unit 1)
+          (reference "Q6") (unit 1)
         )
       )
     )
@@ -1994,7 +1905,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "#PWR0136") (unit 1)
+          (reference "#PWR0128") (unit 1)
         )
       )
     )

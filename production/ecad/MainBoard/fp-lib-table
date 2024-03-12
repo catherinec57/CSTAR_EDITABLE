@@ -14,4 +14,5 @@
   (lib (name "MAX3232")(type "KiCad")(uri "C:/Users/kaden/Documents/Projects/Concrete/production/ecad/components/footprints/MAX3232.pretty")(options "")(descr ""))
   (lib (name "MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_")(type "KiCad")(uri "C:/Users/kaden/Documents/Projects/Concrete/production/ecad/components/footprints/MODULE_ESP32-WROOM-32UE_M113EH6400UH3Q0_.pretty")(options "")(descr ""))
   (lib (name "SP4022_01FTG_C")(type "KiCad")(uri "C:/Users/kaden/Documents/Projects/Concrete/production/ecad/components/footprints/SP4022_01FTG_C.pretty")(options "")(descr ""))
+  (lib (name "CSTAR-MainBoard-Footprints")(type "KiCad")(uri "${KIPRJMOD}/CSTAR-MainBoard-Footprints.pretty")(options "")(descr ""))
 )
