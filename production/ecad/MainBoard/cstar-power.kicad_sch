@@ -2539,7 +2539,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R8") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -2569,7 +2569,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -2666,7 +2666,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -2696,7 +2696,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -2756,7 +2756,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -2818,7 +2818,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -2939,6 +2939,11 @@
           (reference "R11") (unit 1)
         )
       )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
+          (reference "R5") (unit 1)
+        )
+      )
     )
   )
 
@@ -2997,7 +3002,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -3027,7 +3032,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -3211,7 +3216,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -3272,7 +3277,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -3303,7 +3308,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R10") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -3333,7 +3338,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -3394,7 +3399,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -3517,7 +3522,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -3610,7 +3615,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R7") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -3760,7 +3765,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -3790,7 +3795,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -3820,7 +3825,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -4176,7 +4181,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R5") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -4206,7 +4211,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -4451,7 +4456,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "R9") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -4477,6 +4482,11 @@
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
           (reference "#PWR026") (unit 1)
+        )
+      )
+      (project "CSTAR"
+        (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -4762,7 +4772,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/0fc3a7ee-d954-4a57-b160-08f1c7c2ed5e"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )

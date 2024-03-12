@@ -1924,7 +1924,7 @@
       )
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/222d3537-e437-4ced-92e0-9423c8895d91"
-          (reference "R63") (unit 1)
+          (reference "R64") (unit 1)
         )
       )
     )

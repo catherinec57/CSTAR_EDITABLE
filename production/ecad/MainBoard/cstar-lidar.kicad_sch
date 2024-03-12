@@ -545,7 +545,7 @@
   (symbol (lib_id "power:GND") (at 118.11 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1b500555-0d5d-4142-9218-5ef23256715d)
-    (property "Reference" "#PWR027" (at 118.11 76.2 0)
+    (property "Reference" "#PWR028" (at 118.11 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 115.57 74.93 0)
@@ -561,7 +561,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -575,7 +575,7 @@
   (symbol (lib_id "power:+5V") (at 129.54 60.96 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35234c26-44ca-4d66-8586-d67fa4243392)
-    (property "Reference" "#PWR029" (at 133.35 60.96 0)
+    (property "Reference" "#PWR030" (at 133.35 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 125.73 60.96 90)
@@ -591,7 +591,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -605,7 +605,7 @@
   (symbol (lib_id "power:GND") (at 128.27 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4f2f0c96-6493-45ba-b53a-0cc5c70f37c4)
-    (property "Reference" "#PWR028" (at 128.27 88.9 0)
+    (property "Reference" "#PWR029" (at 128.27 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 128.27 87.63 0)
@@ -621,7 +621,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
       (project "cstar-lidar"
@@ -635,7 +635,7 @@
   (symbol (lib_id "power:GND") (at 113.03 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 61e3acae-45ef-4e80-9c55-54bda5b19c7d)
-    (property "Reference" "#PWR026" (at 113.03 74.93 0)
+    (property "Reference" "#PWR027" (at 113.03 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113.03 73.66 0)
@@ -651,7 +651,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/3e924a05-61af-4a8a-bc82-0b26814a19c7"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "cstar-lidar"
