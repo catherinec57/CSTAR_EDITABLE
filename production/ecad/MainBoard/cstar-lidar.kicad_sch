@@ -671,7 +671,7 @@
     (property "Value" "532610771" (at 156.21 73.66 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "532610771:MOLEX_532610771" (at 147.32 71.12 0)
+    (property "Footprint" "532610771 (2):MOLEX_532610771" (at 147.32 71.12 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 147.32 71.12 0)
