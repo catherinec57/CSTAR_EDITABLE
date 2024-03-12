@@ -2461,7 +2461,7 @@
     (property "Value" "150080VS75000" (at 227.33 194.31 90)
       (effects (font (size 0.9 0.9)) (justify left))
     )
-    (property "Footprint" "LED_0VS75000_WRE" (at 242.57 187.96 0)
+    (property "Footprint" "150080VS75000:LED_0VS75000_WRE" (at 242.57 187.96 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "150080VS75000" (at 242.57 187.96 0)
@@ -2705,7 +2705,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 97.79 57.785 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1048824c-9b1b-43a5-abbb-16a037634a69)
-    (property "Reference" "TP5" (at 100.33 53.213 0)
+    (property "Reference" "TP24V" (at 100.33 53.213 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P24V" (at 100.33 55.753 0)
@@ -2721,7 +2721,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP5") (unit 1)
+          (reference "TP24V") (unit 1)
         )
       )
       (project "CSTAR"
@@ -2827,7 +2827,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 222.25 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2369dbfb-adca-4f67-a2b3-2f6ec1353fdf)
-    (property "Reference" "TP1" (at 219.71 78.74 0)
+    (property "Reference" "TP12V" (at 219.71 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P12V" (at 219.71 81.28 0)
@@ -2843,7 +2843,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP1") (unit 1)
+          (reference "TP12V") (unit 1)
         )
       )
       (project "CSTAR"
@@ -3567,7 +3567,7 @@
     (property "Value" "AZ1117IH-3.3TRG1" (at 113.03 166.37 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "SOT223_AZ1117I_6P5X3P5_DIO" (at 83.82 154.94 0)
+    (property "Footprint" "AZ1117IH-3.3TRG1:SOT230P700X185-4N" (at 83.82 154.94 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "AZ1117IH-3.3TRG1" (at 78.74 157.48 0)
@@ -3630,7 +3630,7 @@
     (property "Value" "LT8648SEV#PBF" (at 148.59 54.61 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "LT8648SEVPBF" (at 176.53 154.61 0)
+    (property "Footprint" "" (at 176.53 154.61 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/LT8648S.pdf" (at 176.53 254.61 0)
@@ -3714,7 +3714,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 146.05 170.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f82351f-ebb7-4529-990f-aca8eef787d1)
-    (property "Reference" "TP3" (at 147.32 165.1 0)
+    (property "Reference" "TP3V3" (at 147.32 165.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P3V3" (at 147.32 167.64 0)
@@ -3730,7 +3730,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP3") (unit 1)
+          (reference "TP3V3") (unit 1)
         )
       )
       (project "CSTAR"
@@ -4226,7 +4226,7 @@
     (property "Value" "150080VS75000" (at 164.465 199.39 90)
       (effects (font (size 0.9 0.9)) (justify left))
     )
-    (property "Footprint" "LED_0VS75000_WRE" (at 158.115 184.15 0)
+    (property "Footprint" "150080VS75000:LED_0VS75000_WRE" (at 158.115 184.15 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "150080VS75000" (at 158.115 184.15 0)
@@ -4251,7 +4251,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 358.14 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c5222c0d-5011-4d6a-b4b3-1e9c6e8c0f11)
-    (property "Reference" "TP2" (at 354.33 167.64 0)
+    (property "Reference" "TP5V" (at 354.33 167.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P5V" (at 354.33 170.18 0)
@@ -4267,7 +4267,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP2") (unit 1)
+          (reference "TP5V") (unit 1)
         )
       )
       (project "CSTAR"
@@ -4349,7 +4349,7 @@
     (property "Value" "150080VS75000" (at 58.42 196.85 90)
       (effects (font (size 0.9 0.9)) (justify left))
     )
-    (property "Footprint" "LED_0VS75000_WRE" (at 72.39 185.42 0)
+    (property "Footprint" "150080VS75000:LED_0VS75000_WRE" (at 72.39 185.42 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "150080VS75000" (at 72.39 185.42 0)
@@ -4562,7 +4562,7 @@
     (property "Value" "150080VS75000" (at 86.36 73.66 90)
       (effects (font (size 0.9 0.9)) (justify left))
     )
-    (property "Footprint" "LED_0VS75000_WRE" (at 81.28 69.85 0)
+    (property "Footprint" "150080VS75000:LED_0VS75000_WRE" (at 81.28 69.85 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "150080VS75000" (at 81.28 69.85 0)
@@ -4617,7 +4617,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 68.58 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f0440868-df0b-4faa-9190-01b9d199275c)
-    (property "Reference" "TP7" (at 67.31 165.1 0)
+    (property "Reference" "TP5V" (at 67.31 165.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P5V" (at 67.31 167.64 0)
@@ -4633,7 +4633,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP7") (unit 1)
+          (reference "TP5V") (unit 1)
         )
       )
       (project "CSTAR"
@@ -4812,7 +4812,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 237.49 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f9fac602-13bd-4487-bc04-c2beec9cb6e4)
-    (property "Reference" "TP6" (at 234.95 166.37 0)
+    (property "Reference" "TP12V" (at 234.95 166.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "P12V" (at 234.95 168.91 0)
@@ -4828,7 +4828,7 @@
     (instances
       (project "cstar-power"
         (path "/7edd775e-47a6-46f9-8e16-808bdf3a0e15"
-          (reference "TP6") (unit 1)
+          (reference "TP12V") (unit 1)
         )
       )
       (project "CSTAR"
