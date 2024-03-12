@@ -1432,13 +1432,13 @@
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (pin "1" (uuid a5a6d778-5df0-461e-a6f7-00d6d3368ea7))
-    (pin "4" (uuid c2f40857-62fd-497c-b9a2-e109ee0c19cd))
-    (pin "7" (uuid bebbda40-69f4-4374-bd09-3184d162c48b))
-    (pin "6" (uuid c43ef8a1-a9ad-4b96-bcf4-6788f4af028c))
-    (pin "3" (uuid 2176c4bf-4f34-400d-8c08-5b378a486fa0))
-    (pin "8" (uuid e0384294-2096-4cef-a838-d85c8266aef9))
-    (pin "5" (uuid f4b72aaa-d9ab-4afb-89ef-9ef1c7ac0176))
     (pin "2" (uuid 29df4c80-1a7f-497b-83d1-7b8b7418234b))
+    (pin "3" (uuid 2176c4bf-4f34-400d-8c08-5b378a486fa0))
+    (pin "4" (uuid c2f40857-62fd-497c-b9a2-e109ee0c19cd))
+    (pin "5" (uuid f4b72aaa-d9ab-4afb-89ef-9ef1c7ac0176))
+    (pin "6" (uuid c43ef8a1-a9ad-4b96-bcf4-6788f4af028c))
+    (pin "7" (uuid bebbda40-69f4-4374-bd09-3184d162c48b))
+    (pin "8" (uuid e0384294-2096-4cef-a838-d85c8266aef9))
     (instances
       (project "cstar-io"
         (path "/62407770-7c51-469d-bef6-28d7dddfde53"
@@ -1559,10 +1559,10 @@
     (property "Datasheet" "~" (at 122.555 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid 42d44520-cc6f-4686-9757-23755462f02d))
     (pin "2" (uuid d240bc70-81ec-4956-bcfb-0fb410d19a7d))
     (pin "3" (uuid 5c0f8d5d-b549-4147-a69b-9c95f17e5af5))
     (pin "4" (uuid 4d5357d3-4c79-4b23-8a41-1d6d3ec91a4a))
-    (pin "1" (uuid 42d44520-cc6f-4686-9757-23755462f02d))
     (instances
       (project "cstar-io"
         (path "/62407770-7c51-469d-bef6-28d7dddfde53"
@@ -1656,14 +1656,14 @@
     (property "Value" "10uF" (at 207.01 72.3963 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 204.47 71.12 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 204.47 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 204.47 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 9e1edffd-b83e-4bf6-9ad4-2890deb52e7c))
     (pin "1" (uuid e056838a-f19d-4616-9a06-95efd406754a))
+    (pin "2" (uuid 9e1edffd-b83e-4bf6-9ad4-2890deb52e7c))
     (instances
       (project "cstar-io"
         (path "/62407770-7c51-469d-bef6-28d7dddfde53"
@@ -1853,8 +1853,8 @@
     (property "Datasheet" "691137710002" (at 193.04 74.295 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (pin "2" (uuid db89cfb5-79b4-47dc-b8b3-d50899356cb4))
     (pin "1" (uuid 63349c55-9eca-417a-9041-87c835d525e8))
+    (pin "2" (uuid db89cfb5-79b4-47dc-b8b3-d50899356cb4))
     (instances
       (project "cstar-io"
         (path "/62407770-7c51-469d-bef6-28d7dddfde53"
@@ -1908,14 +1908,14 @@
     (property "Value" "2M" (at 201.295 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 199.771 85.344 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 199.771 85.344 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 198.755 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 77cedb98-223e-4051-b072-8e0082c095c0))
     (pin "1" (uuid 4d12c602-8608-4a1d-a0e2-bf4326fe0eb0))
+    (pin "2" (uuid 77cedb98-223e-4051-b072-8e0082c095c0))
     (instances
       (project "cstar-io"
         (path "/62407770-7c51-469d-bef6-28d7dddfde53"
