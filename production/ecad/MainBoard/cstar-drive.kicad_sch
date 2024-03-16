@@ -4561,7 +4561,7 @@
     (property "Value" "Conn_01x05_Pin" (at 316.865 48.26 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 316.23 55.88 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" (at 316.23 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 316.23 55.88 0)
@@ -4951,13 +4951,13 @@
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 336.55 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c8e3bcf8-d601-4472-9530-d66756b5b9f6)
-    (property "Reference" "J25" (at 337.185 80.01 0)
+    (property "Reference" "J24" (at 337.185 80.01 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x02_Pin" (at 337.185 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 336.55 85.09 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" (at 336.55 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 336.55 85.09 0)
@@ -4968,7 +4968,7 @@
     (instances
       (project "CSTAR"
         (path "/cd9fa943-c6eb-468b-990c-ea873c442553/526f560a-57be-4237-943d-d2bd06db7162"
-          (reference "J25") (unit 1)
+          (reference "J24") (unit 1)
         )
       )
     )
