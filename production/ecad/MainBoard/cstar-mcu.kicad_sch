@@ -3231,9 +3231,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-<<<<<<< Updated upstream
-  (global_label "OUT2 MOTOR 2" (shape output) (at 369.57 46.99 0) (fields_autoplaced)
-=======
   (global_label "nFAULT MOTOR 1" (shape input) (at 321.31 45.72 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid dffb59b2-82e5-4f11-b48d-846e16f71e11)
@@ -3242,7 +3239,6 @@
     )
   )
   (global_label "IN2_MOTOR_2" (shape output) (at 369.57 46.99 0) (fields_autoplaced)
->>>>>>> Stashed changes
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid e01cefe7-3305-4a96-a947-40f389c990b2)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 385.1947 46.99 0)
