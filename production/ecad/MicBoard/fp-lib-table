@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "cstar_mic_footprints")(type "KiCad")(uri "${KIPRJMOD}/cstar_mic_footprints.pretty")(options "")(descr ""))
+)
