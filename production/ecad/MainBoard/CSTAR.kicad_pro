@@ -469,7 +469,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "CSTAR.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
