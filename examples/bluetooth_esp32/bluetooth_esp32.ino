@@ -26,6 +26,7 @@ void loop() {
   if (Serial.available()) {
     msg = Serial.read();
     SerialBT.write(msg); //write any serial message to bluetooth device
+    SerialBT.write()
     Serial.write(msg); // echo message for my sanity
   }
   if (SerialBT.available()) {

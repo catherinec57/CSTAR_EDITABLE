@@ -2,8 +2,8 @@ import serial
 import time
 
 # Replace 'COMx' with the COM port assigned to ESP32test
-port = 'COM5'  
-baudrate = 9600  # Set the baud rate, 9600 is the default for the ESP32
+port = 'COM4'  
+baudrate = 115200  # Set the baud rate, 9600 is the default for the ESP32
 
 try:
     # Opening the serial port
