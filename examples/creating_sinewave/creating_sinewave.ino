@@ -21,7 +21,7 @@ void loop() {
     if (i < numSamples - 1) {
       finalArray.concat(",");
     }
-    Serial.println(finalArray);
+    //Serial.println(finalArray);
   }
   Serial.println(finalArray);
   Serial.println(); 
