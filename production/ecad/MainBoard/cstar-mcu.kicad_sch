@@ -3759,10 +3759,10 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 0d487916-5a4a-48a8-86f5-37a2f882adf4))
-    (pin "3" (uuid 0877e09b-8c18-4f64-95d2-31826892ee34))
-    (pin "5" (uuid 96773363-900b-4dfb-99ec-919b2ca1e403))
-    (pin "4" (uuid 2182ac77-9b21-415f-87e4-92d45bc0a181))
     (pin "2" (uuid a8312764-e465-4582-bcd4-3d62fc7f0d59))
+    (pin "3" (uuid 0877e09b-8c18-4f64-95d2-31826892ee34))
+    (pin "4" (uuid 2182ac77-9b21-415f-87e4-92d45bc0a181))
+    (pin "5" (uuid 96773363-900b-4dfb-99ec-919b2ca1e403))
     (pin "6" (uuid bafc3594-e26a-4311-9d6a-bf2235288d48))
     (instances
       (project "CSTAR"
