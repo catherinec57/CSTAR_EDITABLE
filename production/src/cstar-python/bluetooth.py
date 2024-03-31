@@ -34,7 +34,8 @@ class CstarBluetooth():
             # for now, lets some random noise as np.int16 array
             self.audio_data = np.random.randint(-32768, 32767, size=44100, dtype=np.int16)
             # print(self.audio_data)
-            self.position = (0, 0)
+            #generate random position
+            self.position = (np.random.randint(0, 10), np.random.randint(0, 10))
             self.audio_pos_queue.put((self.position, self.audio_data)) # send it over to the audio processor
 
     #destructor

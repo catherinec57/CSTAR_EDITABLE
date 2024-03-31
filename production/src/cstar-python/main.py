@@ -8,6 +8,7 @@ import multiprocessing
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib import colors
 import numpy as np
 
 # our classes and functions
@@ -115,21 +116,43 @@ if __name__ == "__main__":
 
     #create a blank matplotlib plot
     fig = Figure(dpi = 50)
-
-    # add a subplot
     ax = fig.add_subplot()
-    #create canvas for plot
+
+    #create canvas for fft plot
     canvas = FigureCanvasTkAgg(fig, master=app)
     plot_obj = canvas.get_tk_widget()
     canvas.draw()
-    plot_obj.grid(row=10, column = 10)
+    plot_obj.grid(row=10, column = 0,  pady=PADY, padx = PADX)
+
+    #create new figure for mapping plot
+    # create a 10x10 grid of zeros
+    map_data = np.zeros((10,10))
+
+    # create the figure
+    map_fig = Figure(dpi = 50)
+    map_ax = map_fig.add_subplot()
+
+    cmap = colors.ListedColormap(['gray', 'green'])
+    bounds = [0,1,2]
+    norm = colors.BoundaryNorm(bounds, cmap.N)
+
+    map_ax.imshow(map_data, cmap=cmap, norm=norm)
+
+    map_ax.grid(which='major', axis='both', linestyle='-', color='k', linewidth=2)
+    map_ax.set_xticks(np.arange(-.5, 10, 1))
+    map_ax.set_yticks(np.arange(-.5, 10, 1))
+
+    map_canvas = FigureCanvasTkAgg(map_fig, master=app)
+    map_plot_obj = map_canvas.get_tk_widget()
+    map_canvas.draw()
+    map_plot_obj.grid(row=10, column = 2, pady=PADY, padx = PADX)
 
     #schedule an event to update the plot
     def update():
         try:
             #update the matplotlib plot in the app
             if not fft_plot_queue.empty():
-                print("updating plot")
+                # print("updating plot")
                 fft_data, frequency_bins = fft_plot_queue.get()
                 #erase fig
                 ax.clear()
@@ -139,12 +162,25 @@ if __name__ == "__main__":
 
                 canvas.draw()
 
+            if not bool_audio_pos_queue.empty():
+                #update the mapping plot
+                map_ax.clear()
+                #redraw lines
+                map_ax.grid(which='major', axis='both', linestyle='-', color='k', linewidth=2)
+                map_ax.set_xticks(np.arange(-.5, 10, 1))
+                map_ax.set_yticks(np.arange(-.5, 10, 1))
+                
+                result, data, pos = bool_audio_pos_queue.get()
+
+                map_data[pos[0], pos[1]] = 1 if result else 2
+
+                map_ax.imshow(map_data, cmap=cmap, norm=norm)
+                map_canvas.draw()
+
+
             app.after(100, update)
         except:
             raise Exception("Error updating plot")
-            print("Error updating plot")
-            return
-        
 
     app.after(1, update)
     app.mainloop()
