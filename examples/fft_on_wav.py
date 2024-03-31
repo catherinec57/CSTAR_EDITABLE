@@ -34,7 +34,7 @@ for i, file  in enumerate(files):
     pane.plot(frequency_bins, fft_out)
 
     #only show up to 20000Hz
-    pane.set_xlim(100, 700)
+    pane.set_xlim(0, 20000)
     pane.set_ylim(0, 30000000)
     pane.set_title(file)
     plt.xlabel('Frequency')
