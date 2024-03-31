@@ -28,19 +28,14 @@ class AudioProcessor():
             if not self.audio_pos_queue.empty():
                 # should be changed to process audio and not print
                 self.pos, self.data = self.audio_pos_queue.get() # data is coming in as (pos, data)
+                #possibly DSP the data here?
                 #take the FFT of the data
                 fft, frequency_bins = self.perform_fft(self.data, SAMPLE_RATE)
                 # check for delamination
                 self.delamination = self.check_for_delamination(fft, frequency_bins)
-                # get a matplotlib object of the FFT
-                fft_plot = self.get_plot_object(fft, frequency_bins)
-                # plt.show()
                 # send the plot to main, and all the data to the plotter
                 self.bool_audio_pos_queue.put((self.delamination, self.data, self.pos))
                 self.fft_plot_queue.put((fft, frequency_bins))
-
-
-
 
 
     def perform_fft(self, signal, sample_rate):
@@ -57,14 +52,4 @@ class AudioProcessor():
         # for now return random boolean
         return np.random.choice([True, False])
     
-    def get_plot_object(self, fft, frequency_bins):
-        # get a matplotlib object of the FFT
-        fig = Figure(figsize=(2,1), dpi = 800)
-        ax = fig.add_subplot()
-        #plot the FFT against the frequency bins
-        ax.plot(frequency_bins, np.abs(fft))
-        
-        return fig
-
-        
 
