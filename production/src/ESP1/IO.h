@@ -5,13 +5,9 @@
 
 class IO {
   public: 
-    IO(int pin); // change parameters based on what is required
-     //define all methods
-    void doSomething();
-    //define all vars
-    int var;
-  private:
-    int _pin; // define all private fields, _ designates private
+    IO(int& state);
+    void main();
+    int& state;
 };
 
 #endif

@@ -6,9 +6,10 @@
 
 class BluetoothController {
     public: 
-    BluetoothController(IntQueue& audio_queue); // takes in audio queue to put audio data into 
+    BluetoothController(int& state, IntQueue& audio_queue); // takes in audio queue to put audio data into 
      //define all methods
     void main();
+    int& state;
     IntQueue* audio_queue;
 };
 

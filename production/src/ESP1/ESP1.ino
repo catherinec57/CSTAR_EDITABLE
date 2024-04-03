@@ -2,24 +2,31 @@
 //basic imports
 #include "Arduino.h"
 #include "BluetoothSerial.h"
-#include "Queue.h"
 
 //our imports
 #include "Audio.h"
 #include "Bluetooth.h"
 #include "IO.h"
+#include "Queue.h"
 
 
 //task handlers for tasks
 TaskHandle_t audio_task_handle = NULL;
 TaskHandle_t bluetooth_task_handle = NULL;
+TaskHandle_t io_task_handle = NULL;
+TaskHandle_t uart_task_handle = NULL;
 
 // define queue objects for pipelining data between tasks
 IntQueue audio_q = IntQueue(1000);
 
+//define any state variables that need to be shared between tasks
+int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
+
 // object definitions for everything in hardware
-Audio audio = Audio(audio_q);
-BluetoothController bluetooth_controller = BluetoothController(audio_q);
+Audio audio = Audio(state, audio_q);
+BluetoothController bluetooth_controller = BluetoothController(state, audio_q);
+IO io = IO(state);
+UART_handler uart = UART_handler(state);
 
 
 // we should create a wrapper for every task that we create as the method cannot be directly passed to the task handler (id really get this)
@@ -29,14 +36,28 @@ void audioMainWrapper(void *pvParameters) { // NULL is passed no matter what, so
         // if you were using input parameters, you could do it by using:
         // int *pValue = (int*)pvParameters
         // this creates a pointer and casts the input as that type to save it
-        vTaskDelay(1000); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(1); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void bluetoothMainWrapper(void *pvParameters) {
   while (1) {
     bluetooth_controller.main();
-    vTaskDelay(1000);
+    vTaskDelay(100);
+  }
+}
+
+void ioMainWrapper(void *pvParameters) {
+  while (1) {
+    io.main();
+    vTaskDelay(500);
+  }
+}
+
+void uartMainWrapper(void *pvParameters) {
+  while (1) {
+    uart.main();
+    vTaskDelay(100);
   }
 }
 
@@ -67,6 +88,29 @@ void setup() {
     &bluetooth_task_handle,       // Task handle
     0                   // Core where the task should run
   );
+
+  //IO task
+  xTaskCreatePinnedToCore(
+    ioMainWrapper,          // Task function, in this case object.method
+    "IO Main Task",    // Name of the task (for debugging)
+    1000,               // Stack size (bytes)
+    NULL,               // Task input parameter
+    0,                  // Priority of the task
+    &io_task_handle,       // Task handle
+    0                   // Core where the task should run
+  );
+
+  //UART task
+  xTaskCreatePinnedToCore(
+    uartMainWrapper,          // Task function, in this case object.method
+    "UART Main Task",    // Name of the task (for debugging)
+    1000,               // Stack size (bytes)
+    NULL,               // Task input parameter
+    0,                  // Priority of the task
+    &uart_task_handle,       // Task handle
+    0                   // Core where the task should run
+  );
+
 
 }
 

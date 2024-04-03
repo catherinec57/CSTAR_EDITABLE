@@ -4,31 +4,41 @@
 #include "Arduino.h"
 
 class IntQueue {
-    public: 
-        IntQueue();
-        IntQueue(int buffer_length); // take in the length to create the buffer void setup()
-        ~IntQueue();
-        int get(); // get the next value in the queue
-        int put(int value); // put a value in the queue
-        //define buffer based on input buffer length
+    private:
         int* buffer;
-        int buffer_pointer;
         int buffer_length;
-};
+        int head;
+        int tail;
+        int count;
 
-
-class StringQueue {
     public:
-        StringQueue(int buffer_length);
-        String get();
-        int put(String value);
+        IntQueue();
+        IntQueue(int buffer_length);
+        ~IntQueue();
+        int get();
+        int put(int value);
+        int peek();
+        bool isEmpty();
 };
 
+
+// basically duplicate for the Float Queue
 class FloatQueue {
+    private:
+        float* buffer;
+        int buffer_length;
+        int head;
+        int tail;
+        int count;
+
     public:
+        FloatQueue();
         FloatQueue(int buffer_length);
+        ~FloatQueue();
         float get();
         int put(float value);
+        float peek();
+        bool isEmpty();
 };
 
 #endif

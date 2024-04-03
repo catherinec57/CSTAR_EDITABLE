@@ -1,49 +1,122 @@
 #include <Arduino.h>
 #include "Queue.h"
 
-//define a default constructor
+// Default constructor
 IntQueue::IntQueue() {
-    this->buffer_length = 10;
-    this->buffer = new int[this->buffer_length]; // by default, length is 10
-    this->buffer_pointer = 0;
+    buffer_length = 10;
+    buffer = new int[buffer_length];
+    head = 0;
+    tail = 0;
+    count = 0;
 }
 
-IntQueue::IntQueue(int buffer_length) { // take in the length to create the buffer void setup()
-    // define a field buffer of length buffer_length
+// Constructor with specific size
+IntQueue::IntQueue(int buffer_length) {
     this->buffer_length = buffer_length;
-    this->buffer = new int[buffer_length];
-    this->buffer_pointer = 0;
+    buffer = new int[this->buffer_length];
+    head = 0;
+    tail = 0;
+    count = 0;
 }
 
-IntQueue::~IntQueue() { // during the destructor, delete the buffer
-    delete[] this->buffer;
+// Destructor
+IntQueue::~IntQueue() {
+    delete[] buffer;
 }
 
-int IntQueue::get() { // get the next value in the queue
-    // if the buffer is empty, return -1
-    // Serial.print("Buffer Pointer in get");
-    // Serial.println(this->buffer_pointer);
-    if (this->buffer_pointer == 0) {
+// Remove and return the next value from the queue
+int IntQueue::get() {
+    if (count == 0) {
         Serial.println("Buffer is empty");
         return -1;
     }
-    // return the first value of the buffer, then shift all the values to the left
-    int value = this->buffer[0];
-    for (int i = 0; i < this->buffer_length - 1; i++) {
-        this->buffer[i] = this->buffer[i + 1];
-    }
-    // decrement the buffer pointer
-    this->buffer_pointer--;
+    int value = buffer[head];
+    head = (head + 1) % buffer_length;
+    count--;
     return value;
 }
 
-int IntQueue::put(int value) { // put a value in the queue
-    //if the buffer is not at the edge of the queue, put a value at the pointer, then increment the pointer
-    if (this->buffer_pointer >= this->buffer_length) {
-        Serial.print("Buffer is full");
+// Add a value to the queue
+int IntQueue::put(int value) {
+    if (count >= buffer_length) {
+        Serial.println("Buffer is full");
         return -1;
     }
-    this->buffer[this->buffer_pointer] = value;
-    this->buffer_pointer++;
-    return 1; //if successful
+    buffer[tail] = value;
+    tail = (tail + 1) % buffer_length;
+    count++;
+    return 1;
 }
+
+// Peek at the next value without removing it
+int IntQueue::peek() {
+    if (count == 0) {
+        Serial.println("Buffer is empty");
+        return -1;
+    }
+    return buffer[head];
+}
+
+bool IntQueue::isEmpty() {
+    return count == 0;
+}
+
+
+
+// all the Float Queue methods are the same as the Int Queue methods, just with float instead of int lol
+FloatQueue::FloatQueue() {
+    buffer_length = 10;
+    buffer = new float[buffer_length];
+    head = 0;
+    tail = 0;
+    count = 0;
+}
+
+FloatQueue::FloatQueue(int buffer_length) {
+    this->buffer_length = buffer_length;
+    buffer = new float[this->buffer_length];
+    head = 0;
+    tail = 0;
+    count = 0;
+}
+
+FloatQueue::~FloatQueue() {
+    delete[] buffer;
+}
+
+float FloatQueue::get() {
+    if (count == 0) {
+        Serial.println("Buffer is empty");
+        return -1;
+    }
+    float value = buffer[head];
+    head = (head + 1) % buffer_length;
+    count--;
+    return value;
+}
+
+int FloatQueue::put(float value) {
+    if (count >= buffer_length) {
+        Serial.println("Buffer is full");
+        return -1;
+    }
+    buffer[tail] = value;
+    tail = (tail + 1) % buffer_length;
+    count++;
+    return 1;
+}
+
+
+float FloatQueue::peek() {
+    if (count == 0) {
+        Serial.println("Buffer is empty");
+        return -1;
+    }
+    return buffer[head];
+}
+
+
+bool FloatQueue::isEmpty() {
+    return count == 0;
+}
+
