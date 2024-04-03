@@ -1,7 +1,6 @@
 #ifndef Audio_h //required to ensure no cicular imports
 #define Audio_h
 
-#include "cppQueue.h"
 #include "Arduino.h"
 #include "Queue.h"
 
