@@ -1,4 +1,4 @@
-#include "Motor.h" // make sure to include header !!!
+#include "Motor_drive.h" // make sure to include header !!!
 #include <Arduino.h>
 
 Motor::Motor() { //changing initialization 

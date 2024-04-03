@@ -1,13 +1,10 @@
 #include "Ultrasonic.h" // make sure to include header !!!
 #include <Arduino.h>
 
-Ultrasonic::Ultrasonic(int pin) { //changing initialization 
-  var = var;
-  _pin = pin;
-  // Initialization code here
+Ultrasonic::Ultrasonic() { //changing initialization 
 }
 
-void Ultrasonic::doSomething() {
+void Ultrasonic::main() {
   // Implement your function here
   Serial.println("Doing Something in Ultrasonic");
 }
