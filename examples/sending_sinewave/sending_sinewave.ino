@@ -11,9 +11,9 @@ const int sampleRate = 2000;
 const int frequency = 440;    
 const int numSamples = 800;   
 const float amplitude = 1023; 
-String finalArray;
+String finalData;
 
-void sineWave(String& finalArray);
+void sineWave(String& finalData);
 
 void setup() {
   Serial.begin(115200);
@@ -25,11 +25,11 @@ void setup() {
 void loop() {
   
   //write either over bluetooth or serial based on receive messages
-  sineWave(finalArray);
-  Serial.println(finalArray);
-  SerialBT.print(finalArray); //write any serial message to bluetooth device
+  sineWave(finalData);
+  Serial.println(finalData);
+  SerialBT.print(finalData); //write any serial message to bluetooth device
   //SerialBT.write()
-  Serial.print(finalArray); // echo message for my sanity
+  Serial.print(finalData); // echo message for my sanity
 
   if (SerialBT.available()) {
     Serial.write(SerialBT.read()); //read any bluetooth message available
@@ -38,16 +38,16 @@ void loop() {
   
   delay(20);
 }
-void sineWave(String& finalArray) {
+void sineWave(String& finalData) {
   for (int i = 0; i < numSamples; i++) {
     int value = amplitude * sin(2 * PI * frequency * i / sampleRate);
     String strvalue = String(value);
-    finalArray.concat(strvalue);
+    finalData.concat(strvalue);
     if (i < numSamples - 1) {
-      finalArray.concat(",");
+      finalData.concat(",");
     }
   }
-  //Serial.println(finalArray);
+  //Serial.println(finalData);
   //Serial.println(); 
   delay(1000); 
 }
