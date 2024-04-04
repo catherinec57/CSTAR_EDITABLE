@@ -1,6 +1,8 @@
 
 //basic imports
 #include "Arduino.h"
+#include <utility>
+#include <queue>
 
 //our imports
 #include "Queue.h"
@@ -22,15 +24,16 @@ TaskHandle_t encoder_task_handle = NULL;
 
 
 // define queue objects for pipelining data between tasks
-
+using IntPair = std::pair<int, int>;
+std::queue<IntPair> AngleDistanceQueue; // queue for storing LiDAR data
 
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
 
 // object definitions for everything in hardware
-LiDAR lidar = LiDAR();
+LiDAR lidar = LiDAR(AngleDistanceQueue);
 Motor motor = Motor();
-SensorFusion sensor_fusion = SensorFusion();
+SensorFusion sensor_fusion = SensorFusion(AngleDistanceQueue);
 UART_2 uart_2 = UART_2();
 Ultrasonic ultrasonic = Ultrasonic();
 Encoder encoder = Encoder();
@@ -44,42 +47,42 @@ void lidarMainWrapper(void *pvParameters) { // NULL is passed no matter what, so
         // if you were using input parameters, you could do it by using:
         // int *pValue = (int*)pvParameters
         // this creates a pointer and casts the input as that type to save it
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(10); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void motorMainWrapper(void *pvParameters) { // NULL is passed no matter what, so we have to require something even if its unused
       while(1) { // we want to run this task forever!!!!
         motor.main(); // call the proper motor method that we can't pass to xTaskCreate
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(1000); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void sensorFusionMainWrapper(void *pvParameters) { // NULL is passed no matter what, so we have to require something even if its unused
       while(1) { // we want to run this task forever!!!!
         sensor_fusion.main(); // call the proper sensor_fusion method that we can't pass to xTaskCreate
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(10); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void uart_2MainWrapper(void *pvParameters) { // NULL is passed no matter what, so we have to require something even if its unused
       while(1) { // we want to run this task forever!!!!
         uart_2.main(); // call the proper uart_2 method that we can't pass to xTaskCreate
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(1000); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void ultrasonicMainWrapper(void *pvParameters) { // NULL is passed no matter what, so we have to require something even if its unused
       while(1) { // we want to run this task forever!!!!
         ultrasonic.main(); // call the proper ultrasonic method that we can't pass to xTaskCreate
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(1000); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void encoderMainWrapper(void *pvParameters) { // NULL is passed no matter what, so we have to require something even if its unused
       while(1) { // we want to run this task forever!!!!
         encoder.main(); // call the proper encoder method that we can't pass to xTaskCreate
-        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(1000); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 

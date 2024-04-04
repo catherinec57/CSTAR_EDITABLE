@@ -2,12 +2,18 @@
 #define LiDAR_h
 
 #include "Arduino.h"
+#include <utility>
+#include <queue>
+
+using IntPair = std::pair<int, int>;
 
 class LiDAR {
   public: 
-    LiDAR(); // change parameters based on what is required
+    LiDAR(std::queue<IntPair>& AngleDistanceQueue); // change parameters based on what is required
      //define all methods
+
     void main();
+    std::queue<IntPair>& AngleDistanceQueue;
 };
 
 #endif
