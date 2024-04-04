@@ -5,7 +5,6 @@
 #include <queue>
 
 //our imports
-#include "Queue.h"
 #include "Motor_Drive.h"
 #include "UltraSonic.h"
 #include "LiDAR.h"
@@ -22,22 +21,27 @@ TaskHandle_t uart_2_task_handle = NULL;
 TaskHandle_t ultrasonic_task_handle = NULL;
 TaskHandle_t encoder_task_handle = NULL;
 
-
-// define queue objects for pipelining data between tasks
 using IntPair = std::pair<int, int>;
+// define queue objects for pipelining data between tasks
 std::queue<IntPair> AngleDistanceQueue; // queue for storing LiDAR data
+std::queue<IntPair> DirectionsQueue; // queue for storing x, y coordinates as commands to execute. 
+
+// we should talk about how encoders are going to give data to the sensor fusion task??
+std::queue<IntPair> EncoderQueue; // queue for encoder task to store data in, for sensor fusion to verify before changing current position
 
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
+float velocity = 0.0; // velocity of the robot
+int angle = 0; //current angle of the robot in degrees
+IntPair current_position = IntPair(0, 0); // current position of the robot in x, y coordinates
 
 // object definitions for everything in hardware
-LiDAR lidar = LiDAR(AngleDistanceQueue);
-Motor motor = Motor();
-SensorFusion sensor_fusion = SensorFusion(AngleDistanceQueue);
-UART_2 uart_2 = UART_2();
-Ultrasonic ultrasonic = Ultrasonic();
-Encoder encoder = Encoder();
-
+LiDAR lidar = LiDAR(state, AngleDistanceQueue);
+Motor motor = Motor(state, DirectionsQueue, current_position, angle, velocity);
+SensorFusion sensor_fusion = SensorFusion(state, AngleDistanceQueue, EncoderQueue, current_position, angle, velocity);
+UART_2 uart_2 = UART_2(state, DirectionsQueue);
+Ultrasonic ultrasonic = Ultrasonic(state);
+Encoder encoder = Encoder(state, EncoderQueue, angle);
 
 
 // we should create a wrapper for every task that we create as the method cannot be directly passed to the task handler (id really get this)

@@ -9,10 +9,16 @@ using IntPair = std::pair<int, int>;
 
 class SensorFusion {
   public: 
-    SensorFusion(std::queue<IntPair>& AngleDistanceQueue); // change parameters based on what is required
+    SensorFusion(int& state, std::queue<IntPair>& AngleDistanceQueue, std::queue<IntPair>& EncoderQueue, IntPair& current_position, int& angle, float& velocity); // change parameters based on what is required
      //define all methods
     void main();
     std::queue<IntPair>& AngleDistanceQueue;
+    std::queue<IntPair>& EncoderQueue;
+    int& state;
+    IntPair& current_position;
+    int& angle;
+    float& velocity;
+    
 };
 
 #endif

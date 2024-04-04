@@ -1,8 +1,17 @@
 #include "Motor_drive.h" // make sure to include header !!!
 #include <Arduino.h>
+#include <utility>
+#include <queue>
 
-Motor::Motor() { //changing initialization 
-  // Initialization code here
+using IntPair = std::pair<int, int>;
+
+Motor::Motor(int& state, std::queue<IntPair>& DirectionsQueue, IntPair& current_position, int& angle, float& velocity) : 
+  state(state),
+  DirectionsQueue(DirectionsQueue),
+  current_position(current_position),
+  angle(angle),
+  velocity(velocity) { 
+    // Initialization code here
 }
 
 void Motor::main() {

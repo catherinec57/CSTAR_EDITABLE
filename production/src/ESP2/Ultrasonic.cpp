@@ -1,7 +1,7 @@
 #include "Ultrasonic.h" // make sure to include header !!!
 #include <Arduino.h>
 
-Ultrasonic::Ultrasonic() { //changing initialization 
+Ultrasonic::Ultrasonic(int& state) : state(state) { //changing initialization 
 }
 
 void Ultrasonic::main() {

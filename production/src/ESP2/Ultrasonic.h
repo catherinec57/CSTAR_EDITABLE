@@ -5,9 +5,10 @@
 
 class Ultrasonic {
   public: 
-    Ultrasonic(); // change parameters based on what is required
+    Ultrasonic(int& state); // change parameters based on what is required
      //define all methods
     void main();
+    int& state;
 };
 
 #endif

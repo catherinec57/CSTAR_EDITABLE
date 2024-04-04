@@ -5,16 +5,23 @@
 
 using IntPair = std::pair<int, int>;
 
-SensorFusion::SensorFusion(std::queue<IntPair>& AngleDistanceQueue) :
-  AngleDistanceQueue(AngleDistanceQueue)  { //changing initialization 
+SensorFusion::SensorFusion(int& state, std::queue<IntPair>& AngleDistanceQueue, std::queue<IntPair>& EncoderQueue, IntPair& current_position, int& angle, float& velocity) :
+  AngleDistanceQueue(AngleDistanceQueue),
+  state(state),
+  EncoderQueue(EncoderQueue),
+  current_position(current_position),
+  angle(angle),
+  velocity(velocity) { //changing initialization 
 }
 
 void SensorFusion::main() {
+  // IMPLEMENT LOOP HERE (will be called by wrapper in a loop)
+
   // if not empty
   if (!(AngleDistanceQueue.empty())) {
+    // read from the angle distance queue
     IntPair AngleDistancePair = AngleDistanceQueue.front(); // Get the front item
     AngleDistanceQueue.pop(); // Remove the front item
-    // Implement your function here
     int angle = AngleDistancePair.first;
     int distance = AngleDistancePair.second;
     Serial.print(angle);

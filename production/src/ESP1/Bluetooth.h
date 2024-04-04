@@ -10,7 +10,7 @@ class BluetoothController {
      //define all methods
     void main();
     int& state;
-    IntQueue* audio_queue;
+    IntQueue& audio_queue;
 };
 
 #endif

@@ -2,12 +2,21 @@
 #define Encoder_h
 
 #include "Arduino.h"
+#include <queue>
+#include <utility>
+
+using IntPair = std::pair<int, int>;
 
 class Encoder {
   public: 
-    Encoder(); // change parameters based on what is required
+    Encoder(int& state, std::queue<IntPair>& EncoderQueue, int& angle); // change parameters based on what is required
      //define all methods
     void main();
+    //define all vars
+    int& state;
+    std::queue<IntPair>& EncoderQueue;
+    int& angle;
+
 };
 
 #endif
