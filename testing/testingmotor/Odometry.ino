@@ -9,17 +9,10 @@ double PPR = 537.6;
 double tickCountPerRotation = PPR * 4;
 double totalRightEncoderTicks, totalLeftEncoderTicks = forwardPulses * 4;
 
+
+
 void Rotate(travel_angle) {
-  while () {
-    if travel_angle > 0 {
-      analogWrite(IN1_MOTOR1, 255);
-      analogWrite(IN2_MOTOR2, 255);
-    }
-    else {
-      analogWrite(IN2_MOTOR1, 255);
-      analogWrite(IN1_MOTOR2, 255);
-    }
-  }
+  
 }
 
 void Point(int desired_angle) {
@@ -33,10 +26,10 @@ void Point(int desired_angle) {
 
 void DriveForward(int distance)
 {
-  while (distance > distanceTraveled) {
-    analogWrite(IN1_MOTOR1, 255);
-    analogWrite(IN1_MOTOR2, 255);
-  }
+  analogWrite(IN1_MOTOR1, 255);
+  analogWrite(IN2_MOTOR1, 0);
+  analogWrite(IN1_MOTOR2, 255);
+  analogWrite(IN2_MOTOR2, 0);
 }
 
 void calculateForwardDistance() {
@@ -54,7 +47,11 @@ void countBackwardTicks() {
 }
 
 void setup() {
-  // put your setup code here, to run once:
+
+  pinMode(33, OUTPUT);   // Motor PWM Pins
+  pinMode(27, OUTPUT);
+  pinMode(25, OUTPUT);
+  pinMode(18, OUTPUT);
 
 }
 
