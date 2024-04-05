@@ -1,22 +1,19 @@
-#ifndef Encoder_h //required to ensure no cicular imports
-#define Encoder_h
-
-#include "Arduino.h"
-#include <queue>
-#include <utility>
-
-using IntPair = std::pair<int, int>;
+#ifndef ENCODER_H
+#define ENCODER_H
 
 class Encoder {
-  public: 
-    Encoder(int& state, std::queue<IntPair>& EncoderQueue, int& angle); // change parameters based on what is required
-     //define all methods
-    void main();
-    //define all vars
-    int& state;
-    std::queue<IntPair>& EncoderQueue;
-    int& angle;
+public:
+    Encoder(int CHA, int CHB);
+    int getPosition();
+    void reset();
 
+private:
+    int _CHA;
+    int _CHB;
+    volatile int _position;
+    void handleInterrupt();
+    static void handleInterrupt0();
+    static void handleInterrupt1();
 };
 
 #endif

@@ -12,8 +12,8 @@ class Motor {
     void stop();
 
   private:
-    int PWM_SIGNAL_1;
-    int PWM_SIGNAL_2;
+    int _PWM_SIGNAL_1;
+    int _PWM_SIGNAL_2;
 };
 
 #endif
