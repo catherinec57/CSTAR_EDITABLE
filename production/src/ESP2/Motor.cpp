@@ -13,8 +13,8 @@ void Motor::setSpeed(int speed) {
     analogWrite(_PWM_SIGNAL_2, speed);
 }
 
-void Motor::setDirection(bool forward) {
-    if (forward) {
+void Motor::setDirection(bool clockwise) {
+    if (clockwise) {
         digitalWrite(_PWM_SIGNAL_1, HIGH);
         digitalWrite(_PWM_SIGNAL_2, LOW);
     } else {

@@ -1,4 +1,4 @@
-#ifndef MOTOR_H //required to ensure no cicular imports
+#ifndef MOTOR_H
 #define MOTOR_H
 
 #include "Arduino.h"
@@ -8,7 +8,7 @@ class Motor {
     Motor(int PWM_SIGNAL_1, int PWM_SIGNAL_2);
     ~Motor();
     void setSpeed(int speed);
-    void setDirection(bool direction);
+    void setDirection(bool clockwise);
     void stop();
 
   private:
