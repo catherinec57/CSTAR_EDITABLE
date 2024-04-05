@@ -1,23 +1,20 @@
-#ifndef Motor_h //required to ensure no cicular imports
-#define Motor_h
+#ifndef MOTOR_DRIVE_H
+#define MOTOR_DRIVE_H
 
-#include "Arduino.h"
-#include <utility>
-#include <queue>
+// Wheel parameters
+const double WHEEL_DIAMETER = 0.10; // Diameter of the wheels in meters
+const double WHEEL_TRACK = 0.30;   // Distance between the wheels in meters
 
-using IntPair = std::pair<int, int>;
+// Encoder parameters
+const int ENCODER_COUNTS_PER_REV = 537.6; // Number of counts per wheel revolution (PPR)
 
-class Motor {
-  public: 
-    Motor(int& state, std::queue<IntPair>& DirectionsQueue, IntPair& current_position, int& angle, float& velocity); // change parameters based on what is required
-     //define all methods
-    void main();
-    //define all vars
-    int& state;
-    std::queue<IntPair>& DirectionsQueue;
-    IntPair& current_position;
-    int& angle;
-    float& velocity;
-};
+// Functions
+void updateOdometry();
+void moveForward(double distance);
+void moveBackward(double distance);
+void rotate(double targetAngle);
+void orientToAngle(double targetAngle);
+void resetStartPosition();
+void getRelativePosition(double& relX, double& relY, double& relTheta);
 
 #endif
