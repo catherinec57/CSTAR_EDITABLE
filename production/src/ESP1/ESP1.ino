@@ -8,6 +8,7 @@
 #include "Bluetooth.h"
 #include "IO.h"
 #include "Queue.h"
+#include "UART.h"
 
 
 //task handlers for tasks
@@ -18,15 +19,16 @@ TaskHandle_t uart_task_handle = NULL;
 
 // define queue objects for pipelining data between tasks
 IntQueue audio_q = IntQueue(1000);
+IntQueue position_queue = IntQueue(1000);
 
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
 
 // object definitions for everything in hardware
 Audio audio = Audio(state, audio_q);
-BluetoothController bluetooth_controller = BluetoothController(state, audio_q);
+BluetoothController bluetooth_controller = BluetoothController(state, audio_q, position_queue);
 IO io = IO(state);
-UART_handler uart = UART_handler(state);
+UART_Handler uart = UART_Handler(state, position_queue);
 
 
 // we should create a wrapper for every task that we create as the method cannot be directly passed to the task handler (id really get this)

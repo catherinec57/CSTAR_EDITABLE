@@ -2,12 +2,14 @@
 #define UART_h
 
 #include "Arduino.h"
+#include "Queue.h"
 
-class UART_Hander {
+class UART_Handler {
   public: 
-    UART_handler(int& state);
+    UART_Handler(int& state, IntQueue& position_queue);
     void main();
     int& state;
+    IntQueue& position_queue;
 };
 
 #endif

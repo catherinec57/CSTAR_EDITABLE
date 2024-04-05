@@ -28,7 +28,6 @@ void loop() {
   sineWave(finalData);
   Serial.println(finalData);
   SerialBT.print(finalData); //write any serial message to bluetooth device
-  //SerialBT.write()
   Serial.print(finalData); // echo message for my sanity
 
   if (SerialBT.available()) {
@@ -46,8 +45,6 @@ void sineWave(String& finalData) {
     if (i < numSamples - 1) {
       finalData.concat(",");
     }
-  }
-  //Serial.println(finalData);
-  //Serial.println(); 
+  } 
   delay(1000); 
 }
