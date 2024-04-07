@@ -3,19 +3,23 @@ import serial
 import serial.tools.list_ports
 # Basic UI libraries (we keeping things simple here)
 import customtkinter as ctk
-from tkinter import ttk
+import tkinter as tk
+from tkinter import ttk, PhotoImage
 import multiprocessing
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib import colors
 import numpy as np
+from matplotlib import cm as cm
+from matplotlib import colormaps as cmaps
+
 
 # our classes and functions
 from bluetooth import CstarBluetooth
 from audio_processor import AudioProcessor
 
-# please do not read this code its so shitty and im embarrased - Kaden
+# please do not read this code its so shitty and im embarrased - Kaden 
 
 # Function to list all bluetooth devices available
 def list_bluetooth_devices():
@@ -77,7 +81,6 @@ if __name__ == "__main__":
     bool_audio_pos_queue = multiprocessing.Queue() # will contain tuples of (bool, audio data, position)
     fft_plot_queue = multiprocessing.Queue() # will contain matplotlib plots of the FFT
 
-    
     # set default padx for all widgets
     PADX = 10
     PADY = 10
@@ -115,8 +118,10 @@ if __name__ == "__main__":
 
 
     #create a blank matplotlib plot
-    fig = Figure(dpi = 50)
+    fig = Figure(dpi = 50, figsize = (15, 15))
     ax = fig.add_subplot()
+    ax.tick_params('x', labelsize = 23, labelrotation = 45)
+    ax.tick_params('y', labelsize = 23)
 
     #create canvas for fft plot
     canvas = FigureCanvasTkAgg(fig, master=app)
@@ -124,23 +129,29 @@ if __name__ == "__main__":
     canvas.draw()
     plot_obj.grid(row=10, column = 0,  pady=PADY, padx = PADX)
 
-    #create new figure for mapping plot
-    # create a 10x10 grid of zeros
-    map_data = np.zeros((10,10))
-
     # create the figure
-    map_fig = Figure(dpi = 50)
+    map_fig = Figure(dpi = 50, figsize = (15, 15))
     map_ax = map_fig.add_subplot()
 
-    cmap = colors.ListedColormap(['gray', 'green'])
-    bounds = [0,1,2]
-    norm = colors.BoundaryNorm(bounds, cmap.N)
+    cmap = cmaps['RdBu'] # blue --> red colormap
+
+    norm = colors.Normalize(vmin=-100, vmax=100, clip=True)
+    mapper = cm.ScalarMappable(norm=norm, cmap=cmap)
+
+    plot_size = 20
+
+    #create new figure for mapping plot
+    # create a 20x20 grid of zeros
+    map_data = np.zeros((plot_size,plot_size))
 
     map_ax.imshow(map_data, cmap=cmap, norm=norm)
 
     map_ax.grid(which='major', axis='both', linestyle='-', color='k', linewidth=2)
-    map_ax.set_xticks(np.arange(-.5, 10, 1))
-    map_ax.set_yticks(np.arange(-.5, 10, 1))
+
+    map_ax.set_xticks(np.arange(-0.5, plot_size, 1))
+    map_ax.set_yticks(np.arange(-0.5, plot_size, 1))
+    map_ax.tick_params('x', labelsize = 23, labelrotation = 45)
+    map_ax.tick_params('y', labelsize = 23)
 
     map_canvas = FigureCanvasTkAgg(map_fig, master=app)
     map_plot_obj = map_canvas.get_tk_widget()
@@ -152,12 +163,10 @@ if __name__ == "__main__":
         try:
             #update the matplotlib plot in the app
             if not fft_plot_queue.empty():
-                # print("updating plot")
                 fft_data, frequency_bins = fft_plot_queue.get()
                 #erase fig
                 ax.clear()
                 # draw on new data
-                
                 ax.plot(frequency_bins, np.abs(fft_data))
 
                 canvas.draw()
@@ -167,13 +176,13 @@ if __name__ == "__main__":
                 map_ax.clear()
                 #redraw lines
                 map_ax.grid(which='major', axis='both', linestyle='-', color='k', linewidth=2)
-                map_ax.set_xticks(np.arange(-.5, 10, 1))
-                map_ax.set_yticks(np.arange(-.5, 10, 1))
+
+                map_ax.set_xticks(np.arange(-0.5, plot_size, 1))
+                map_ax.set_yticks(np.arange(-0.5, plot_size, 1))
                 
                 result, data, pos = bool_audio_pos_queue.get()
-
-                map_data[pos[0], pos[1]] = 1 if result else 2
-
+                map_data[pos[0], pos[1]] = result
+            
                 map_ax.imshow(map_data, cmap=cmap, norm=norm)
                 map_canvas.draw()
 

@@ -45,11 +45,12 @@ class AudioProcessor():
         frequency_bins = np.fft.fftfreq(len(signal), 1 / sample_rate)
         return fft, frequency_bins
     
-    def check_for_delamination(self, fft, frequency_bins) -> bool:
+    def check_for_delamination(self, fft, frequency_bins) -> int:
         # check for delamination
         # insert algorithm here
 
-        # for now return random boolean
-        return np.random.choice([True, False])
+        # for now return random int between -100 (for sure not delaminated) and 100 (definite)
+        return np.random.randint(-100, 100)
+        #return np.random.choice([True, False])
     
 
