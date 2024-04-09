@@ -7,7 +7,7 @@ class Encoder {
 public:
     Encoder(int CH_A_PIN, int CH_B_PIN);
     int getPosition();
-    void reset();
+    void Reset();
 
 private:
     int _CH_A_PIN;
@@ -42,7 +42,7 @@ int Encoder::getPosition() {
     return encoderPosition;
 }
 
-void Encoder::reset() {
+void Encoder::Reset() {
     encoderPosition = 0;
 }
 
@@ -66,7 +66,7 @@ void handleChannelB() {
   }
 }
 
-//
+// MOTOR.h
 
 #ifndef MOTOR_H
 #define MOTOR_H
@@ -75,48 +75,44 @@ void handleChannelB() {
 
 class Motor {
   public: 
-    Motor(int PWM_SIGNAL_1, int PWM_SIGNAL_2);
-    ~Motor();
-    void setSpeed(int speed);
-    void setDirection(bool clockwise);
-    void stop();
+    Motor(int SIGNAL_A, int SIGNAL_B);
+    void Move(int speed, bool clockwise);
+    void Stop();
 
   private:
-    int _PWM_SIGNAL_1;
-    int _PWM_SIGNAL_2;
+    int _SIGNAL_A;
+    int _SIGNAL_B;
 };
 
 #endif
 
-//
+// MOTOR.cpp
 
 #include "Motor.h"
 #include <Arduino.h>
 
-Motor::Motor(int PWM_SIGNAL_1, int PWM_SIGNAL_2) {
-    _PWM_SIGNAL_1 = PWM_SIGNAL_1;
-    _PWM_SIGNAL_2 = PWM_SIGNAL_2;
-    pinMode(_PWM_SIGNAL_1, OUTPUT);
-    pinMode(_PWM_SIGNAL_2, OUTPUT);
+Motor::Motor(int SIGNAL_A, int SIGNAL_B) {
+    _SIGNAL_A = SIGNAL_A;
+    _SIGNAL_B = SIGNAL_B;
+
+    pinMode(_SIGNAL_A, OUTPUT);
+    pinMode(_SIGNAL_B, OUTPUT);
 }
 
-void Motor::setSpeed(int speed) {
-    analogWrite(_PWM_SIGNAL_1, speed);
-    analogWrite(_PWM_SIGNAL_2, speed);
+void Motor::Move(int speed, bool clockwise) {
+  if (clockwise) {
+    analogWrite(_SIGNAL_A, speed);
+    analogWrite(_SIGNAL_B, 0);
+  }
+  else {
+    analogWrite(_SIGNAL_A, 0);
+    analogWrite(_SIGNAL_B, speed);
+  }
 }
 
-void Motor::setDirection(bool clockwise) {
-    if (clockwise) {
-        digitalWrite(_PWM_SIGNAL_1, HIGH);
-        digitalWrite(_PWM_SIGNAL_2, LOW);
-    } else {
-        digitalWrite(_PWM_SIGNAL_1, LOW);
-        digitalWrite(_PWM_SIGNAL_2, HIGH);
-    }
-}
-
-void Motor::stop() {
-    setSpeed(0);
+void Motor::Stop() {
+    analogWrite(_SIGNAL_A, 0);
+    analogWrite(_SIGNAL_B, 0);
 }
 
 //
