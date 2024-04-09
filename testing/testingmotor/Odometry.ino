@@ -1,62 +1,69 @@
+// ENCODER.h
+
 #ifndef ENCODER_H
 #define ENCODER_H
 
 class Encoder {
 public:
-    Encoder(int CHA, int CHB);
+    Encoder(int CH_A_PIN, int CH_B_PIN);
     int getPosition();
     void reset();
 
 private:
-    int _CHA;
-    int _CHB;
-    volatile int _position;
-    void handleInterrupt();
-    static void handleInterrupt0();
-    static void handleInterrupt1();
+    int _CH_A_PIN;
+    int _CH_B_PIN;
+    volatile int encoderPosition;
+    static void handleChannelA();
+    static void handleChannelB();
 };
 
 #endif
 
 
 
-// 
+// ENCODER.cpp
 
 #include "Encoder.h"
 #include <Arduino.h>
 
-Encoder::Encoder(int CHA, int CHB) {
-    _CHA = CHA;
-    _CHB = CHB;
-    _position = 0;
+Encoder::Encoder(int CH_A_PIN, int CH_B_PIN) {
+    _CH_A_PIN = CH_A_PIN;
+    _CH_B_PIN = CH_B_PIN;
+    encoderPosition = 0;
 
-    // Attach interrupts to the encoder pins
-    attachInterrupt(digitalPinToInterrupt(_CHA), handleInterrupt0, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(_CHB), handleInterrupt1, CHANGE);
+    pinMode(CH_A_PIN, INPUT_PULLUP);
+    pinMode(CH_B_PIN, INPUT_PULLUP);
+
+    attachInterrupt(digitalPinToInterrupt(_CH_A_PIN), handleChannelA, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(_CH_B_PIN), handleChannelB, CHANGE);
 }
 
 int Encoder::getPosition() {
-    return _position;
+    return encoderPosition;
 }
 
 void Encoder::reset() {
-    _position = 0;
+    encoderPosition = 0;
 }
 
-void Encoder::handleInterrupt() {
-    if (digitalRead(_CHA) == digitalRead(_CHB)) {
-        _position++;
-    } else {
-        _position--;
-    }
+void handleChannelA() {
+  if (digitalRead(CH_B_PIN) == LOW) {
+    encoderPosition++; // If the B channel is low (0) when the A channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
+  } else if (digitalRead(CH_B_PIN) == HIGH) {
+    encoderPosition--; // If the B channel is high (1) when the A channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
+  } else {
+    ;
+  }
 }
 
-void Encoder::handleInterrupt0() {
-    Encoder::getInstance()->handleInterrupt();
-}
-
-void Encoder::handleInterrupt1() {
-    Encoder::getInstance()->handleInterrupt();
+void handleChannelB() {
+  if (digitalRead(CH_A_PIN) == LOW) {
+    encoderPosition--; // If the A channel is low (0) when the B channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
+  } else if (digitalRead(CH_A_PIN) == HIGH) {
+    encoderPosition++; // If the A channel is high (1) when the B channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
+  } else {
+    ;
+  }
 }
 
 //
