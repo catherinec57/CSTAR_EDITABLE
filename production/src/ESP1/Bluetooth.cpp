@@ -19,10 +19,25 @@ void BluetoothController::main() {
   // Implement your function here
   // put a value in the queue
   int audioValue;
-  int posValue;
-  while (!(audio_queue.isEmpty())) {
+  int xValue;
+  int yValue;
+  String finalString;
+  while (!(audio_queue.isEmpty()) && !(position_queue.isEmpty())) {
     audioValue = audio_queue.get();
-    SerialBT.print(audioValue);
+    xValue = position_queue.get();
+    yValue = position_queue.get();
+
+    String strAudio = String(audioValue);
+    String strX = String(xValue);
+    String strY = String(yValue);
+
+    finalString.concat(strAudio);
+    finalString.concat(", ");
+    finalString.concat(xPos);
+    finalString.concat(", ");
+    finalString.concat(yPos);
+
+    SerialBT.print(finalString);
   }
   while (!(position_queue.isEmpty())) {
     posValue = position_queue.get();

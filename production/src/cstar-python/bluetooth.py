@@ -22,8 +22,13 @@ class CstarBluetooth():
         
     def main(self):
         # function to run on loop to send and receive data, everything that needs to happen with Bluetooth should be called here
+        port = 'COM4'  
+        baudrate = 115200
         while True:
             # print("running Bluetooth loop")
+            ser = serial.Serial(port, baudrate, timeout=1)
+            ser.write(b'running Bluetooth loop')
+            print(f"running Bluetooth loop")
             # if anything in queue, send command
             if not self.command_queue.empty():
                 # should be changed to send command and not print
