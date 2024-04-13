@@ -1,3 +1,91 @@
+#include <Arduino.h>
+#include <Wire.h>
+
+#define CH_A_PIN 33 // Encoder channel A pin
+#define CH_B_PIN 27 // Encoder channel B pin
+#define MOTOR1_IN1 4 // Motor IN1 pin
+#define MOTOR1_IN2 22 // Motor IN2 pin
+#define SDA 13
+#define SCL 14
+#define GPIO_Address 0x20
+#define OUTPUT_REGISTER 0x01
+#define CONFIG_REGISTER 0x03
+
+volatile int encoderPosition = 0; // Encoder position variable
+
+// Interrupt service routines for encoder A and B
+void IRAM_ATTR handleChannelA() {
+  if (digitalRead(CH_B_PIN) == LOW) {
+    encoderPosition++; // If the B channel is low (0) when the A channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
+  } else {
+    encoderPosition--; // If the B channel is high (1) when the A channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
+  }
+}
+
+void IRAM_ATTR handleChannelB() {
+  if (digitalRead(CH_A_PIN) == LOW) {
+    encoderPosition--; // If the A channel is low (0) when the B channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
+  } else {
+    encoderPosition++; // If the A channel is high (1) when the B channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
+  }
+}
+
+// int getPosition() {
+//   return encoderPosition; // Returns the current position of the Encoder
+// }
+
+// void Reset() {
+//   encoderPosition = 0; // Resets the position of the encoder to zero
+// }
+
+void setup() {
+
+  Serial.begin(115200);
+
+  // Set encoder pins as input with internal pull-ups
+  pinMode(CH_A_PIN, INPUT_PULLUP);
+  pinMode(CH_B_PIN, INPUT_PULLUP);
+  pinMode(MOTOR1_IN1, OUTPUT);
+  pinMode(MOTOR1_IN2, OUTPUT);
+
+  // Attach interrupt service routines to encoder pins
+  attachInterrupt(digitalPinToInterrupt(CH_A_PIN), handleChannelA, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(CH_B_PIN), handleChannelB, CHANGE);
+
+  Wire.begin(SDA, SCL);
+  // define I2C bus
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(CONFIG_REGISTER);
+  Wire.write(0x00);
+  Wire.endTransmission();
+
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(CONFIG_REGISTER);
+  if (Wire.endTransmission()) {
+    Serial.println("Error1!");
+  }
+  // scan the I2C bus to see if the device is connected
+  // check to make sure the output register is set correctly
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(0x01FF); // Point to the Output register of Port 0
+  int output;
+  output = Wire.endTransmission();
+  if (output) {
+    Serial.println("Error2!");
+    Serial.println(output);
+  }
+}
+
+void loop() {
+    encoderPosistion = 0;
+  // analogWrite(MOTOR1_IN1, 0);
+  // analogWrite(MOTOR1_IN2, 0);
+  // Serial.println(encoderPosition);
+}
+
+
+
+
 // ENCODER.h
 
 #ifndef ENCODER_H
