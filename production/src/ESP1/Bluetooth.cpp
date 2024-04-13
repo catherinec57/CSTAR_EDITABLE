@@ -33,15 +33,11 @@ void BluetoothController::main() {
 
     finalString.concat(strAudio);
     finalString.concat(", ");
-    finalString.concat(xPos);
+    finalString.concat(strX);
     finalString.concat(", ");
-    finalString.concat(yPos);
+    finalString.concat(strY);
 
     SerialBT.print(finalString);
-  }
-  while (!(position_queue.isEmpty())) {
-    posValue = position_queue.get();
-    SerialBT.print(posValue);
   }
   // update the state of the robot where 0 = IDLE, 1 = RUNNING, 2 = ERROR
   state = !state;
