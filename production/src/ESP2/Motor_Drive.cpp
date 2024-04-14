@@ -3,6 +3,10 @@
 #include "Motor.h"
 #include <math.h>
 #include <Arduino.h>
+#include <iostream>
+#include <stdbool.h>
+
+using namespace std;
 
 // Encoder and motor objects
     Encoder leftEncoder(2, 3);
@@ -146,4 +150,87 @@ int main() {
     printf("Relative position: (%.2f, %.2f, %.2f)\n", relX, relY, relTheta);
 
     return 0;
+}
+
+
+// PID LOOP - NEHA
+
+// Initialize static variables (constants)
+double setpoint = 0;           // Desired value (end location - static value)
+double current_pos = 0;        // Actual value (as the robot is moving, NOT the start point - dynamic value)
+double error = 0;
+double inv_error = 0;
+double output_velocity = 0;         // PID output speed
+double velocity = 0;                // Robot's actual speed
+long double e = 2.71828182846;      // e for exponential curve
+
+// Initialize dynamic variables
+int max_speed = 250;     // Maximum speed the robot is at before slowing down
+int slowing_dist = 2;    // Robot will start to slow down when it reaches this distance from the setpoint
+                         // (In the future, will want to make this a function of our current velocity)
+
+
+// Initialization code can go here, pin descriptions, ect.
+void setupPID() {
+    setpoint = 10;      // Desired position
+    current_pos = 0;    // Position that the robot is currently at
+}
+
+
+// Compute output
+void updatePID() {
+    // Error = distance the robot is away from the desired position
+    error = setpoint - current_pos;
+    inv_error = current_pos - setpoint;
+
+    // Calculate the derivative of the error (goal is to stop at setpoint)
+    if (error <= slowing_dist) {
+        // Slow to a stop
+        //output_velocity = (error * max_speed) / slowing_dist;      // Linearly
+        output_velocity = max_speed - max_speed * pow(e, (error * inv_error));    // Exponentially (better)
+    }
+    else {
+        // Maintain constant speed
+        output_velocity = max_speed;
+    }
+}
+
+
+// Define states as an enumeration
+typedef enum {
+    STOPPED = 0,
+    DRIVING = 1,
+    SPINNING = 2
+} RobotState;
+
+// Current state of the robot
+RobotState state;
+
+// Apply output - only when robot is RUNNING
+void applyPID() {
+    switch (state) {
+        case SPINNING:
+            update_rotation_PID();
+            break;
+        case DRIVING:
+            update_driving_PID();
+            break;
+        case STOPPED:
+            do_nothing();
+            break;
+    }
+}
+
+void update_rotation_PID() {
+    // Update rotation based on PID control
+    rotate(theta);  // theta = target angle from the PID
+}
+
+void update_driving_PID() {
+    // Update driving based on PID control
+    moveForward(current_pos);  // Move forward to 'current_pos' as updated by PID
+}
+
+void do_nothing() {
+    // No operation (used in STOPPED state)
 }
