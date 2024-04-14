@@ -46,10 +46,10 @@ static const i2s_config_t i2s_config = { //i2s_driver_config_t
 // further information regarding these other connections.
 
 static const i2s_pin_config_t pin_config = {
-    .bck_io_num = 14,                                 // The bit clock connectiom, goes to pin 27 of ESP32 1 BCLK
-    .ws_io_num = 18,                                  // Word select, also known as word select or left right clock 26 2 LRCK
-    .data_out_num = 26,                               // Data out from the ESP32, connect to DIN on 38357A 25 3 I2S_PIN_NO_CHANGE
-    .data_in_num = 19                                 // we are not interested in I2S data into the ESP32 I2S_PIN_NO_CHANGE SDTO 25
+    .bck_io_num = 19,                                 // The bit clock connectiom, goes to pin 27 of ESP32 1 BCLK
+    .ws_io_num = 14,                                  // Word select, also known as word select or left right clock 26 2 LRCK
+    .data_out_num = I2S_PIN_NO_CHANGE,                               // Data out from the ESP32, connect to DIN on 38357A 25 3 I2S_PIN_NO_CHANGE
+    .data_in_num = 26                                 // we are not interested in I2S data into the ESP32 I2S_PIN_NO_CHANGE SDTO 25
 };
 
 //------------------------------------------------------------------------------------------------------------------------
@@ -59,17 +59,39 @@ void setup() {
     Serial.begin(9600);
     i2s_driver_install(i2s_num, &i2s_config, 0, NULL);        // ESP32 will allocated resources to run I2S
     i2s_set_pin(i2s_num, &pin_config);                        // Tell it the pins you will be using    
+
+    // Define the LEDC channel and pin
+    const int ledPin = 18; // GPIO pin connected to the LED or other PWM device
+    const int ledChannel = 0; // LEDC channel (0-15)
+
+    // Setup PWM properties
+    const int freq = 40000; // Frequency in Hertz (40 kHz is high but still common)
+    const int resolution = 8; // Resolution in bits (1-16, 8 bits gives 0-255 range for duty cycle)
+    
+    // Configure LED PWM functionalitites
+    ledcSetup(ledChannel, freq, resolution);
+    
+    // Attach the channel to the GPIO to be controlled
+    ledcAttachPin(ledPin, ledChannel);
+
+    // Set the duty cycle (0-255) due to 8-bit resolution
+    ledcWrite(ledChannel, 127); // 50% duty cycle
 }
 
 void loop()
 {   
+
     uint32_t audioData; // Assuming you're reading 24-bit samples
     size_t bytesRead;
     // Read data from the I2S interface
 //    Serial.print(digitalRead(11));
+    analogWrite(18, 128);
     i2s_read(i2s_num, &audioData, sizeof(audioData), &bytesRead, portMAX_DELAY);
     // Print the number of bytes read
 //    Serial.println(bytesRead);
 //    Serial.println("HI");
-    Serial.println(audioData);
+  // if (audioData != 0) {
+      Serial.println(audioData);
+  // }
+
 }

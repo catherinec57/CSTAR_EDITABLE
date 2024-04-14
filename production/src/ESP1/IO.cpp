@@ -2,9 +2,9 @@
 #include <Arduino.h>
 
 // Pin values from MCU Schematic
-#define red_pin 21;
-#define green_pin 23;
-#define blue_pin 33;
+#define red_pin 21
+#define green_pin 23
+#define blue_pin 33
 
 // Set colors for the RGB LED
 void setYellow() {         // Idle = Yellow
