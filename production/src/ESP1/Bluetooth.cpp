@@ -23,21 +23,23 @@ void BluetoothController::main() {
   int yValue;
   String finalString;
   while (!(audio_queue.isEmpty()) && !(position_queue.isEmpty())) {
-    audioValue = audio_queue.get();
-    xValue = position_queue.get();
-    yValue = position_queue.get();
-
-    String strAudio = String(audioValue);
-    String strX = String(xValue);
-    String strY = String(yValue);
-
-    finalString.concat(strAudio);
+    //while loop that adds value from audio queue into a string till queue is empty
+    String audioStr;
+    while(!(audio_queue.isEmpty())) {
+      audioStr.concat(String(audio_queue.get()));
+      audioStr.concat(", ");
+    }
+    //adding audio and position to one long string
+    //NEED TO FIX GETTING POSITION DATA
+    finalString.concat(audioStr);
+    finalString.concat(String(position_queue.get()));
     finalString.concat(", ");
-    finalString.concat(strX);
-    finalString.concat(", ");
-    finalString.concat(strY);
+    finalString.concat(String(position_queue.get()));
 
     SerialBT.print(finalString);
+
+    finalString = null;
+    audioStr = null;
   }
   // update the state of the robot where 0 = IDLE, 1 = RUNNING, 2 = ERROR
   state = !state;
