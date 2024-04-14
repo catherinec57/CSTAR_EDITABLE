@@ -35,9 +35,9 @@ enum State{
 IO::IO(int& state) : 
     state(state) {
   // Initialization code - setup LED pins
-  pinMode(YELLOW_LED_PIN, OUTPUT);
-  pinMode(GREEN_LED_PIN, OUTPUT);
-  pinMode(RED_LED_PIN, OUTPUT);
+  pinMode(blue_pin, OUTPUT);
+  pinMode(green_pin, OUTPUT);
+  pinMode(red_pin, OUTPUT);
 }
 
 
