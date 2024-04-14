@@ -38,8 +38,8 @@ void BluetoothController::main() {
 
     SerialBT.print(finalString);
 
-    finalString = null;
-    audioStr = null;
+    finalString = "";
+    audioStr = "";
   }
   // update the state of the robot where 0 = IDLE, 1 = RUNNING, 2 = ERROR
   state = !state;
