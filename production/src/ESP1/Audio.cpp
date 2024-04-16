@@ -1,10 +1,12 @@
 #include "Audio.h" // make sure to include header !!!
 #include <Arduino.h>
-#include "Queue.h"
+
 #include "driver/i2s.h"
+#include <queue>
+#include <utility>
 
 
-Audio::Audio(int& state, IntQueue& audio_queue) : 
+Audio::Audio(int& state, std::queue<int>& audio_queue) : 
     state(state),
     audio_queue(audio_queue) { //changing initialization 
   // this->audio_queue = audio_queue;
@@ -71,6 +73,6 @@ void Audio::main() {
   if (audioData!= 0) {
     audioData = value;
   }
-  audio_queue.put(value);
+  audio_queue.push(value);
   value++;
 }
