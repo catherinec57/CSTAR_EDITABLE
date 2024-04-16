@@ -255,9 +255,12 @@ void LiDAR::start(char scan_type, int& express_trame) {
 }
 
 void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& express_data, ExpressPacket& express_old_data, int& express_trame) {
+  // Initialize flag to track initialization status
+  static bool express_data_initialized = false;
+
   // Iterate over measures
   if (!scanning) {
-    start(scan_type, express_data, express_trame);
+    start(scan_type, express_trame);
   }
   while (true) {
     int dsize = scanning;
@@ -269,8 +272,7 @@ void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& expres
         Serial.print("/");
         Serial.print(max_buf_meas);
         Serial.println(". Cleaning buffer...");
-        // stop();
-        
+        // stop(); 
       }
     }
 
@@ -280,13 +282,17 @@ void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& expres
       // _process_scan(raw);
       free(raw);
     } else if (scan_type == 'express') {
+      if (scan_type == 'express') {
+        if (!express_data_initialized) { // Check if express_data is initialized
+          Serial.println("Express data not initialized.");
+       }
       if (express_trame == 32) {
         express_trame = 0;
-        if (!express_data) {
-          Serial.println("reading first time bytes");
-          // express_data = ExpressPacket.from_string(_read_response(dsize));
-        }
-
+        if (!express_data_initialized) {
+        Serial.println("reading first time bytes");
+        // express_data = ExpressPacket.from_string(_read_response(dsize));
+        express_data_initialized = true; // Set the flag to true upon initialization
+      }
         express_old_data = express_data;
         Serial.print("set old_data with start_angle ");
         Serial.println(express_old_data.start_angle);
@@ -303,7 +309,7 @@ void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& expres
       Serial.print(" and angle new : ");
       Serial.println(express_data.start_angle);
       // _process_express_scan(express_old_data, express_data.start_angle, express_trame);
+      }
     }
   }
 }
-
