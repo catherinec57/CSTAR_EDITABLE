@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <ESP32Encoder.h>
+#include "FastInterruptEncoder.h"
 #define CH_A_PIN 33 // Encoder channel A pin
 #define CH_B_PIN 27
 #define MOTOR1_IN1 4 // Motor IN1 pin
@@ -11,67 +11,67 @@
 #define OUTPUT_REGISTER 0x01
 #define CONFIG_REGISTER 0x03
 
-volatile int encoderPosition = 0;
+Encoder enc(CH_A_PIN, CH_B_PIN, HALFQUAD, 250);
 
-void handleChannelA() {
-   if (digitalRead(CH_B_PIN) == LOW) {
-     encoderPosition++; // If the B channel is low (0) when the A channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
-   } else {
-     encoderPosition--; // If the B channel is high (1) when the A channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
-   }
- }
-// void handleChannelB() {
-//    if (digitalRead(CH_A_PIN) == HIGH) {
-//      encoderPosition++; // If the B channel is low (0) when the A channel changes, the encoder is rotating in the positive direction, so the encoderPosition is incremented.
-//    } else {
-//      encoderPosition--; // If the B channel is high (1) when the A channel changes, the encoder is rotating in the negative direction, so the encoderPosition is decremented.
-//    }
-// }
+unsigned long encodertimer = 0;
+
+/* create a hardware timer */
+hw_timer_t * timer = NULL;
+
+void IRAM_ATTR Update_IT_callback()
+{ 
+  enc.loop(); 
+}
 
 void setup(){
 	
-	Serial.begin(9600);
+	Serial.begin(115200);
 
-  pinMode(CH_A_PIN, INPUT_PULLDOWN);
-  pinMode(CH_B_PIN, INPUT_PULLDOWN);
-  pinMode(MOTOR1_IN1, OUTPUT);
-  pinMode(MOTOR1_IN2, OUTPUT);
+	if (enc.init()) {
+    Serial.println("Encoder Initialization OK");
+  } else {
+    Serial.println("Encoder Initialization Failed");
+    while(1);
+  }
 
-  attachInterrupt(digitalPinToInterrupt(CH_A_PIN), handleChannelA, RISING);
-  // attachInterrupt(digitalPinToInterrupt(CH_B_PIN), handleChannelB, RISING);
-	
   Wire.begin(SDA, SCL);
-//   // define I2C bus
-   Wire.beginTransmission(GPIO_Address);
-   Wire.write(CONFIG_REGISTER);
-   Wire.write(0x00);
-   Wire.endTransmission();
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(CONFIG_REGISTER);
+  Wire.write(0x00);
+  Wire.endTransmission();
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(CONFIG_REGISTER);
+  if (Wire.endTransmission()) {
+    Serial.println("Error!");
+  }
+   
+  Wire.beginTransmission(GPIO_Address);
+  Wire.write(0x01); // Point to the Output register of Port 0
+  Wire.write(0xFF);
+  int output;
+  output = Wire.endTransmission();
+  if (output) {
+    Serial.println("Error!");
+    Serial.println(output);
+  }
 
-   Wire.beginTransmission(GPIO_Address);
-   Wire.write(CONFIG_REGISTER);
-   if (Wire.endTransmission()) {
-     Serial.println("Error!");
-   }
-   // scan the I2C bus to see if the device is connected
-   // check to make sure the output register is set correctly
-   Wire.beginTransmission(GPIO_Address);
-   Wire.write(0x01); // Point to the Output register of Port 0
-   Wire.write(0xFF);
-   int output;
-   output = Wire.endTransmission();
-   if (output) {
-     Serial.println("Error!");
-     Serial.println(output);
-   }
+  /* Use 1st timer of 4 */
+  /* 1 tick take 1/(80MHZ/80) = 1us so we set divider 80 and count up */
+  timer = timerBegin(0, 80, true);
+  /* Attach onTimer function to our timer */
+  timerAttachInterrupt(timer, &Update_IT_callback, true);
+  /* Set alarm to call onTimer function every 100 ms -> 100 Hz */
+  timerAlarmWrite(timer, 10000, true);
+  /* Start an alarm */
+  timerAlarmEnable(timer);
 }
 
 void loop() {
-  while ((encoderPosition/4) < 537) {
-    analogWrite(MOTOR1_IN1, 0);
-    analogWrite(MOTOR1_IN2, 20);
-    Serial.println(encoderPosition/4);
-  }
-	analogWrite(MOTOR1_IN1, 0);
+	// Loop and read the count
+	analogWrite(MOTOR1_IN1, 20);
   analogWrite(MOTOR1_IN2, 0);
-  Serial.println(encoderPosition/4);
+  if ((millis() > (encodertimer + 1000)) || (millis() < encodertimer)) {
+    Serial.println(enc.getTicks());
+    encodertimer = millis();
+  }
 }

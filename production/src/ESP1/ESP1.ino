@@ -2,14 +2,17 @@
 //basic imports
 #include "Arduino.h"
 #include "BluetoothSerial.h"
+#include <utility>
+#include <queue>
 
 //our imports
 #include "Audio.h"
 #include "Bluetooth.h"
 #include "IO.h"
-#include "Queue.h"
+
 #include "UART.h"
 
+using IntPair = std::pair<int, int>;
 
 //task handlers for tasks
 TaskHandle_t audio_task_handle = NULL;
@@ -18,8 +21,8 @@ TaskHandle_t io_task_handle = NULL;
 TaskHandle_t uart_task_handle = NULL;
 
 // define queue objects for pipelining data between tasks
-IntQueue audio_q = IntQueue(1000);
-IntQueue position_queue = IntQueue(1000);
+std::queue<int> audio_q; // queue for storing audio data
+std::queue<IntPair> position_queue; // queue for storing x, y coordinates as commands to execute.
 
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2

@@ -1,10 +1,14 @@
 #include "Bluetooth.h" // make sure to include header !!!
 #include <Arduino.h>
-#include "Queue.h"
+
+#include <utility>
+#include <queue>
+
+using IntPair = std::pair<int, int>;
 
 
 
-BluetoothController::BluetoothController(int&state, IntQueue& audio_queue, IntQueue& position_queue) : 
+BluetoothController::BluetoothController(int&state, std::queue<int>& audio_queue, std::queue<IntPair>& position_queue) : 
     state(state),  // directly assign these variables to attributes
     audio_queue(audio_queue),
     position_queue(position_queue) { 
@@ -22,19 +26,22 @@ void BluetoothController::main() {
   int xValue;
   int yValue;
   String finalString;
-  while (!(audio_queue.isEmpty()) && !(position_queue.isEmpty())) {
+  while (!(audio_queue.empty()) && !(position_queue.empty())) {
     //while loop that adds value from audio queue into a string till queue is empty
     String audioStr;
-    while(!(audio_queue.isEmpty())) {
-      audioStr.concat(String(audio_queue.get()));
+    while(!(audio_queue.empty())) {
+      audioStr.concat(String(audio_queue.front()));
+      audio_queue.pop();
       audioStr.concat(", ");
     }
     //adding audio and position to one long string
     //NEED TO FIX GETTING POSITION DATA
     finalString.concat(audioStr);
-    finalString.concat(String(position_queue.get()));
+    finalString.concat(String(position_queue.front().first));
+    position_queue.pop();
     finalString.concat(", ");
-    finalString.concat(String(position_queue.get()));
+    finalString.concat(String(position_queue.front().second));
+    position_queue.pop();
 
     SerialBT.print(finalString);
 

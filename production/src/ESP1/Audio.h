@@ -2,15 +2,17 @@
 #define Audio_h
 
 #include "Arduino.h"
-#include "Queue.h"
+
+#include <queue>
+#include <utility>
 
 class Audio {
   public: 
-    Audio(int& state, IntQueue& audio_queue); // takes in audio queue to put audio data into 
+    Audio(int& state, std::queue<int>& audio_queue); // takes in audio queue to put audio data into 
      //define all methods
     void main();
     int& state;
-    IntQueue& audio_queue;
+    std::queue<int>& audio_queue;
     int value = 0;
 
 };
