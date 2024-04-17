@@ -12,9 +12,14 @@
 
 #include "UART.h"
 
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+
+// define SerialBT object from the library
+
 using IntPair = std::pair<int, int>;
 
-//task handlers for tasks
 TaskHandle_t audio_task_handle = NULL;
 TaskHandle_t bluetooth_task_handle = NULL;
 TaskHandle_t io_task_handle = NULL;
@@ -24,12 +29,14 @@ TaskHandle_t uart_task_handle = NULL;
 std::queue<int> audio_q; // queue for storing audio data
 std::queue<IntPair> position_queue; // queue for storing x, y coordinates as commands to execute.
 
+BluetoothSerial SerialBT;
+
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
 
 // object definitions for everything in hardware
 Audio audio = Audio(state, audio_q);
-BluetoothController bluetooth_controller = BluetoothController(state, audio_q, position_queue);
+BluetoothController bluetooth_controller = BluetoothController(state, audio_q, position_queue, SerialBT);
 IO io = IO(state);
 UART_Handler uart = UART_Handler(state, position_queue);
 
@@ -67,12 +74,20 @@ void uartMainWrapper(void *pvParameters) {
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  //task handlers for tasks
   Serial.begin(115200);
+  if (!SerialBT.begin("CSTAR Robot")) {
+        Serial.println("An error occurred initializing Bluetooth");
+    } else {
+        Serial.println("Bluetooth initialized");
+    }
+  
+  // put your setup code here, to run once:
+  
 
   // create all tasks!!!!
 
-  // audio task 
+  //audio task 
   xTaskCreatePinnedToCore(
     audioMainWrapper,          // Task function, in this case object.method
     "Audio Main Task",    // Name of the task (for debugging)

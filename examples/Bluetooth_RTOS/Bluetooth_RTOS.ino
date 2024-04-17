@@ -1,5 +1,5 @@
 #include "BluetoothSerial.h"
-#include "freertos/FreeRTOS.h"
+#include "FreeRTOS.h"
 #include "freertos/task.h"
 #include "Arduino.h"
 
@@ -24,7 +24,7 @@ void TaskSineWave(void *parameter);
 
 void setup() {
   Serial.begin(115200);
-  SerialBT.begin("ESP32test"); // Bluetooth device name
+  SerialBT.begin("CSTAR Robot"); // Bluetooth device name
   Serial.println("The device started, now you can pair it with bluetooth!");
 
   // Create tasks for Bluetooth communication and sine wave generation
