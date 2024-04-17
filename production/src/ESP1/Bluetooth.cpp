@@ -23,6 +23,8 @@ BluetoothController::BluetoothController(int&state, std::queue<int>& audio_queue
 
 void BluetoothController::main() {
   Serial.print("Bluetooth working");
+  SerialBT.print("Cat is such a hottie");
+
   // int audioValue;
   // int xValue;
   // int yValue;
