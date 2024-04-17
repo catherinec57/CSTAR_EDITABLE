@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Replace 'COMx' with the COM port assigned to ESP32test
-port = 'COM4'  
+port = 'COM5'  
 baudrate = 115200  # Set the baud rate, 9600 is the default for the ESP32
 
 try:
@@ -14,6 +14,7 @@ try:
 
     # Writing data to the Bluetooth device
     ser.write(b'Hello\n')
+    print('hi')
     
     # Reading data from the Bluetooth device
     while True:  # While there is data waiting to be read
