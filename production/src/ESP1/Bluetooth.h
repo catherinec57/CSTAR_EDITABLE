@@ -11,13 +11,14 @@ using IntPair = std::pair<int, int>;
 
 class BluetoothController {
     public: 
-    BluetoothController(int& state, std::queue<int>& audio_queue, std::queue<IntPair>& position_queue); // takes in audio queue to put audio data into 
+    BluetoothController(int& state, std::queue<int>& audio_queue, std::queue<IntPair>& command_queue, BluetoothSerial& btSerial, IntPair &current_position); // takes in audio queue to put audio data into 
      //define all methods
     void main();
     int& state;
     std::queue<int>& audio_queue;
-    std::queue<IntPair>& position_queue;
-    BluetoothSerial SerialBT;
+    std::queue<IntPair>& command_queue;
+    BluetoothSerial& SerialBT;
+    IntPair &current_position;
 };
 
 #endif

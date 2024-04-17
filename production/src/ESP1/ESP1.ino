@@ -9,12 +9,18 @@
 #include "Audio.h"
 #include "Bluetooth.h"
 #include "IO.h"
-
 #include "UART.h"
+
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+#define RX 12
+#define TX 27
+
+// define SerialBT object from the library
 
 using IntPair = std::pair<int, int>;
 
-//task handlers for tasks
 TaskHandle_t audio_task_handle = NULL;
 TaskHandle_t bluetooth_task_handle = NULL;
 TaskHandle_t io_task_handle = NULL;
@@ -22,16 +28,21 @@ TaskHandle_t uart_task_handle = NULL;
 
 // define queue objects for pipelining data between tasks
 std::queue<int> audio_q; // queue for storing audio data
-std::queue<IntPair> position_queue; // queue for storing x, y coordinates as commands to execute.
+std::queue<IntPair> command_queue; 
+BluetoothSerial SerialBT;
+SoftwareSerial SwSerial(RX, TX); // 14, 12 on pins
+
 
 //define any state variables that need to be shared between tasks
 int state = 0; // IDLE -> 0, RUNNING -> 1, ERROR -> 2
+IntPair current_position = std::make_pair(0, 0); // x, y position of the robot
 
 // object definitions for everything in hardware
 Audio audio = Audio(state, audio_q);
-BluetoothController bluetooth_controller = BluetoothController(state, audio_q, position_queue);
+UART_Handler uart(state, command_queue, current_position, SwSerial);
+BluetoothController bluetooth_controller = BluetoothController(state, audio_q, command_queue, SerialBT, current_position);
 IO io = IO(state);
-UART_Handler uart = UART_Handler(state, position_queue);
+
 
 
 // we should create a wrapper for every task that we create as the method cannot be directly passed to the task handler (id really get this)
@@ -41,14 +52,14 @@ void audioMainWrapper(void *pvParameters) { // NULL is passed no matter what, so
         // if you were using input parameters, you could do it by using:
         // int *pValue = (int*)pvParameters
         // this creates a pointer and casts the input as that type to save it
-        vTaskDelay(1); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
+        vTaskDelay(100); // THIS IS NECESSARY WE WANT THIS TASK TO GO FOREVER BUT HAVE A DELAY
       }
   }
 
 void bluetoothMainWrapper(void *pvParameters) {
   while (1) {
     bluetooth_controller.main();
-    vTaskDelay(100);
+    vTaskDelay(10);
   }
 }
 
@@ -62,17 +73,26 @@ void ioMainWrapper(void *pvParameters) {
 void uartMainWrapper(void *pvParameters) {
   while (1) {
     uart.main();
-    vTaskDelay(100);
+    vTaskDelay(10);
   }
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  //task handlers for tasks
   Serial.begin(115200);
+  if (!SerialBT.begin("CSTAR Robot")) {
+        Serial.println("An error occurred initializing Bluetooth");
+    } else {
+        Serial.println("Bluetooth initialized");
+    }
+  
+  // put your setup code here, to run once:
+  pinMode(RX, INPUT);
+  pinMode(TX, OUTPUT);
 
   // create all tasks!!!!
 
-  // audio task 
+  //audio task 
   xTaskCreatePinnedToCore(
     audioMainWrapper,          // Task function, in this case object.method
     "Audio Main Task",    // Name of the task (for debugging)
@@ -91,7 +111,7 @@ void setup() {
     NULL,               // Task input parameter
     1,                  // Priority of the task
     &bluetooth_task_handle,       // Task handle
-    0                   // Core where the task should run
+    4                   // Core where the task should run
   );
 
   //IO task
@@ -113,7 +133,7 @@ void setup() {
     NULL,               // Task input parameter
     0,                  // Priority of the task
     &uart_task_handle,       // Task handle
-    0                   // Core where the task should run
+    4                   // Core where the task should run
   );
 
 
