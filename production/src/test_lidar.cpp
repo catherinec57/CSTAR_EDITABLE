@@ -278,8 +278,11 @@ void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& expres
 
     if (scanning == 'normal') {
       uint8_t* raw = _read_response(dsize);
+      bool new_scan;
+      int quality;
+      float angle, distance;
       // Process raw data
-      // _process_scan(raw);
+      _process_scan(raw, new_scan, quality, angle, distance);
       free(raw);
     } else if (scan_type == 'express') {
       if (scan_type == 'express') {
@@ -313,3 +316,4 @@ void LiDAR::iter_measures(char scan_type, int max_buf_meas,ExpressPacket& expres
     }
   }
 }
+
