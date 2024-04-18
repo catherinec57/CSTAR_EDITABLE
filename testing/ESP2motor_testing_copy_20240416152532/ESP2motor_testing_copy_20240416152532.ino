@@ -100,7 +100,10 @@ void loop() {
     }
     
   }
-  
+  analogWrite(MOTOR1_IN1, 0);
+    analogWrite(MOTOR1_IN2, 200);
+    analogWrite(MOTOR2_IN2, 0);
+    analogWrite(MOTOR2_IN1, 200);
       
 
 }

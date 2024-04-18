@@ -9,22 +9,36 @@
 
 std::queue<std::pair<int, int>> AngleDistanceQueue;
 
+bool created = false; 
+
 // Create an instance of the LiDAR class
-LiDAR lidar(0, AngleDistanceQueue);
+// LiDAR lidar(0, AngleDistanceQueue);
 
 void setup() {
   // Initialize serial communication
   Serial.begin(115200);
   pinMode(RX_PIN, INPUT);
   pinMode(TX_PIN, OUTPUT);
+  Serial.println("setup");
   
   // Create an instance of the LiDAR class
-  LiDAR lidar(0, AngleDistanceQueue);
+  // LiDAR lidar(0, AngleDistanceQueue);
+  delay(5000); 
+  Serial.println("after delay");
 }
-
+LiDAR lidar(0, AngleDistanceQueue);
 
 void loop() {
-  // Main program loop
+  // if(!created) {
+  //   Serial.println("creating lidar");
+  //   // LiDAR lidar(0, AngleDistanceQueue);
+  //   Serial.println("created lidar"); 
+  //   created = true; 
+  // } else {
+  // //  Serial.println(created); 
+
+  // }
+  // // Main program loop
   lidar.main();
 
   // Check if there's any data in the queue
@@ -40,7 +54,9 @@ void loop() {
     Serial.print(angle);
     Serial.print(", Distance: ");
     Serial.println(distance);
+  } else {
+    Serial.println("q empty");
   }
   
-  delay(1000); // Wait for 1 second before the next iteration
+  // delay(1000); // Wait for 1 second before the next iteration
 }

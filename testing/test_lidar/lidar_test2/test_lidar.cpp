@@ -49,19 +49,88 @@ HardwareSerial mySerial(2); // Use hardware serial port 2
 // }
 
 using IntPair = std::pair<int, int>;
+using FloatPair = std::pair<float, float>;
+
+char scan_type = 1;
+int express_trame = 32;
+int max_buf_meas = 1000;
+static bool express_data_initialized = false;
 
 LiDAR::LiDAR(const int& state, std::queue<IntPair>& AngleDistanceQueue) : 
   state(state),
   AngleDistanceQueue(AngleDistanceQueue) {
   // Initialization code here
+  if (!scanning) {
+    start(scan_type, express_trame);
+  }
 }
 
+
 void LiDAR::main() {
+  Serial.println("LiDAR main");
+  Serial.print("Scan type: ");
+  Serial.println(scan_type);
+  int x;
   // Implement your function here
-  int angle = 1;
-  int distance = 2;
-  AngleDistanceQueue.push(IntPair(angle, distance)); // add some data in the form of a pair to the queue
-  Serial.println("LiDAR Task Running");
+  int dsize = scanning;
+    if (max_buf_meas) {
+      int data_in_buf = mySerial.available();
+      if (data_in_buf > max_buf_meas) {
+        Serial.print("Too many bytes in the input buffer: ");
+        Serial.print(data_in_buf);
+        Serial.print("/");
+        Serial.print(max_buf_meas);
+        Serial.println(". Cleaning buffer...");
+        // stop(); 
+      }
+    }
+    
+    if (scan_type == 1) {
+      Serial.println("normal scan");
+      uint8_t* raw = _read_response(dsize);
+      bool new_scan;
+      int quality;
+      float angle, distance;
+      // Process raw data
+      Serial.print("before process scan");
+      // Serial.print(raw);
+      _process_scan(raw, new_scan, quality, angle, distance);
+      Serial.println("After process scan");
+      free(raw);
+      FloatPair AngleDistancePair = std::make_pair(angle, distance);
+      AngleDistanceQueue.push(AngleDistancePair);
+    }
+    // } else if (scan_type == 'express') {
+    //   if (scan_type == 'express') {
+    //     if (!express_data_initialized) { // Check if express_data is initialized
+    //       Serial.println("Express data not initialized.");
+    //    }
+    //   if (express_trame == 32) {
+    //     express_trame = 0;
+    //     if (!express_data_initialized) {
+    //     Serial.println("reading first time bytes");
+    //     // express_data = ExpressPacket.from_string(_read_response(dsize));
+    //     express_data_initialized = true; // Set the flag to true upon initialization
+    //   }
+    //     express_old_data = express_data;
+    //     Serial.print("set old_data with start_angle ");
+    //     Serial.println(express_old_data.start_angle);
+    //     // express_data = ExpressPacket.from_string(_read_response(dsize));
+    //     Serial.print("set new_data with start_angle ");
+    //     Serial.println(express_data.start_angle);
+    //   }
+
+    //   express_trame++;
+    //   Serial.print("process scan of frame ");
+    //   Serial.print(express_trame);
+    //   Serial.print(" with angle : ");
+    //   Serial.print(express_old_data.start_angle);
+    //   Serial.print(" and angle new : ");
+    //   Serial.println(express_data.start_angle);
+    //   // _process_express_scan(express_old_data, express_data.start_angle, express_trame);
+    //   }
+    // }
+    
 }
 
 bool LiDAR::_process_scan(uint8_t* raw, bool& new_scan, int& quality, float& angle, float& distance) {
@@ -138,6 +207,7 @@ void LiDAR::_send_cmd(uint8_t cmd) {
 std::pair<int, bool> LiDAR::_read_descriptor() {
   // Read descriptor packet
   uint8_t descriptor[DESCRIPTOR_LEN];
+  Serial.println("readBytes"); 
   mySerial.readBytes(descriptor, DESCRIPTOR_LEN);
   if (DEBUG) {
     Serial.print("Received descriptor: ");
@@ -148,19 +218,26 @@ std::pair<int, bool> LiDAR::_read_descriptor() {
     Serial.println();
   }
   if (descriptor[0] != SYNC_BYTE || descriptor[1] != SYNC_BYTE2) {
-    throw "Incorrect descriptor starting bytes";
+    Serial.println("214");
+    // throw "Incorrect descriptor starting bytes";
   }
+  Serial.println("217");
   bool is_single = descriptor[5] == 0;
   return std::make_pair(descriptor[2], is_single);
 }
 
 uint8_t* LiDAR::_read_response(int dsize) {
+  Serial.println("reading response...");
   // Read response packet with length of `dsize` bytes
   uint8_t* data = (uint8_t*)malloc(dsize);
-  while (mySerial.available() < dsize) {
+  while (mySerial.available() > dsize) {
+    // Serial.println("getting Serial data");
+    // Serial.println(mySerial.available());
+    // Serial.println("Available bytes ^^");
+    mySerial.readBytes(data, dsize);
+    // Serial.println((int)(data));
     delay(1);
   }
-  mySerial.readBytes(data, dsize);
   if (DEBUG) {
     Serial.print("Received data: ");
     for (int i = 0; i < dsize; i++) {
@@ -220,35 +297,37 @@ void LiDAR::start(char scan_type, int& express_trame) {
   std::pair<int, int> health;
   String status;
   int errorCode;
-  getHealth(status, errorCode);
-  if (health.first == 2) {
-    Serial.print("Trying to reset sensor due to the error. Error code: ");
-    Serial.println(health.second);
-    // reset();
-    getHealth(status, errorCode);
-    if (health.first == 2) {
-      throw "RPLidar hardware failure.";
-    }
-  } else if (health.first == 1) {
-    Serial.print("Warning sensor status detected! Error code: ");
-    Serial.println(health.second);
-  }
+  // getHealth(status, errorCode);
+  // if (health.first == 2) {
+  //   Serial.print("Trying to reset sensor due to the error. Error code: ");
+  //   Serial.println(health.second);
+  //   // reset();
+  //   getHealth(status, errorCode);
+  //   if (health.first == 2) {
+  //     throw "RPLidar hardware failure.";
+  //   }
+  // } else if (health.first == 1) {
+  //   Serial.print("Warning sensor status detected! Error code: ");
+  //   Serial.println(health.second);
+  // }
   uint8_t cmd = scan_type == 'express' ? SCAN_TYPE_EXPRESS : SCAN_TYPE_NORMAL;
   Serial.print("Starting scan process in ");
   Serial.print(scan_type);
   Serial.println(" mode");
-  if (scan_type == 'express') {
-    uint8_t payload[] = {0x00, 0x00, 0x00, 0x00, 0x00};
-    _send_payload_cmd(cmd, payload, sizeof(payload));
-  } else {
+  // if (scan_type == 'express') {
+  //   uint8_t payload[] = {0x00, 0x00, 0x00, 0x00, 0x00};
+  //   _send_payload_cmd(cmd, payload, sizeof(payload));
+  // } else {
     _send_cmd(cmd);
-  }
+  // }
   std::pair<int, bool> descriptor = _read_descriptor();
   if (descriptor.first != (scan_type == 'express' ? 5 : 5)) {
-    throw "Wrong get_info reply length";
+    Serial.println("Wrong get_info reply length");
+    // throw "Wrong get_info reply length";
   }
   if (descriptor.second) {
-    throw "Not a multiple response mode";
+    Serial.println("Not a multiple response mode");
+    // throw "Not a multiple response mode";
   }
 
   scanning = true;

@@ -22,6 +22,11 @@ void setRed() {          // Error = Red
     digitalWrite(green_pin, LOW);
     digitalWrite(blue_pin, LOW);
 }
+void setBlue() {
+  digitalWrite(blue_pin, HIGH);
+  digitalWrite(green_pin, LOW);
+  digitalWrite(red_pin, LOW);
+}
 
 
 // Enumerate states
@@ -42,12 +47,13 @@ IO::IO(int& state) :
 
 
 void IO::main() {
+  Serial.print(state);
   // Implement function
   // Render on the RGB the state of the robot where 0 = IDLE, 1 = RUNNING, 2 = ERROR
 
       switch(state){
           case IDLE:
-              setYellow(); // When idle = set LED to Yellow
+              setBlue(); // When idle = set LED to Yellow
               break;
 
           case RUNNING:
