@@ -8,10 +8,10 @@ Motor::Motor(int PWM_SIGNAL_1, int PWM_SIGNAL_2) {
     pinMode(_PWM_SIGNAL_2, OUTPUT);
 }
 
-void Motor::setSpeed(int speed) {
-    analogWrite(_PWM_SIGNAL_1, speed);
-    analogWrite(_PWM_SIGNAL_2, speed);
-}
+// void Motor::setSpeed(int speed) {
+//     analogWrite(_PWM_SIGNAL_1, speed);
+//     analogWrite(_PWM_SIGNAL_2, speed);
+// }
 
 void Motor::setDirection(bool clockwise) {
     if (clockwise) {

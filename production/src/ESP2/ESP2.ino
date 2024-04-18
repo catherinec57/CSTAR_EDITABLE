@@ -39,7 +39,7 @@ IntPair current_position = IntPair(0, 0); // current position of the robot in x,
 LiDAR lidar = LiDAR(state, AngleDistanceQueue);
 Motor motor = Motor(state, DirectionsQueue, current_position, angle, velocity);
 SensorFusion sensor_fusion = SensorFusion(state, AngleDistanceQueue, EncoderQueue, current_position, angle, velocity);
-UART_2 uart_2 = UART_2(state, DirectionsQueue);
+UART_2 uart_2 = UART_2(state, DirectionsQueue);`
 Ultrasonic ultrasonic = Ultrasonic(state);
 Encoder encoder = Encoder(state, EncoderQueue, angle);
 

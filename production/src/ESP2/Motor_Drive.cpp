@@ -17,101 +17,66 @@ using namespace std;
 double x = 0.0, y = 0.0, theta = 0.0;
 double startX = 0.0, startY = 0.0, startTheta = 0.0;
 
-void updateOdometry() {
-    // Get encoder delta counts
-    int leftEncoderDelta = leftEncoder.getPosition();
-    int rightEncoderDelta = rightEncoder.getPosition();
-    leftEncoder.reset();
-    rightEncoder.reset();
-
-    // Calculate wheel distances
-    double leftWheelDistance = (leftEncoderDelta * WHEEL_DIAMETER * M_PI) / ENCODER_COUNTS_PER_REV;
-    double rightWheelDistance = (rightEncoderDelta * WHEEL_DIAMETER * M_PI) / ENCODER_COUNTS_PER_REV;
-
-    // Calculate robot displacement and rotation
-    double displacement = (leftWheelDistance + rightWheelDistance) / 2.0;
-    double dTheta = (rightWheelDistance - leftWheelDistance) / WHEEL_TRACK;
-
-    // Update robot position and orientation
-    x += displacement * cos(theta);
-    y += displacement * sin(theta);
-    theta += dTheta;
+void setSpeed(int velocity) {
+  if (velocity < 0) {
+    analogWrite(_PWM_SIGNAL_1, 0); // PWM???
+    analogWrite(_PWM_SIGNAL_2, velocity);
+  }
+  else {
+    analogWrite(_PWM_SIGNAL_1, velocity);
+    analogWrite(_PWM_SIGNAL_2, 0);
+  }
 }
 
-void moveForward(double distance) {
+// void updateOdometry() {
+//     // Get encoder delta counts
+//     int leftEncoderDelta = leftEncoder.getPosition();
+//     int rightEncoderDelta = rightEncoder.getPosition();
+//     leftEncoder.reset();
+//     rightEncoder.reset();
+
+//     // Calculate wheel distances
+//     double leftWheelDistance = (leftEncoderDelta * WHEEL_DIAMETER * M_PI) / ENCODER_COUNTS_PER_REV;
+//     double rightWheelDistance = (rightEncoderDelta * WHEEL_DIAMETER * M_PI) / ENCODER_COUNTS_PER_REV;
+
+//     // Calculate robot displacement and rotation
+//     double displacement = (leftWheelDistance + rightWheelDistance) / 2.0;
+//     double dTheta = (rightWheelDistance - leftWheelDistance) / WHEEL_TRACK;
+
+//     // Update robot position and orientation
+//     x += displacement * cos(theta);
+//     y += displacement * sin(theta);
+//     theta += dTheta;
+// }
+
+void move(int velocity) {
     // Set motor speeds for forward motion
-    leftMotor.setSpeed(100);
-    rightMotor.setSpeed(100);
-    leftMotor.setDirection(true);
-    rightMotor.setDirection(true);
-
-    // Move the robot the desired distance
-    double targetDistance = distance;
-    while (targetDistance > 0) {
-        updateOdometry();
-        targetDistance -= fabs(leftWheelDistance + rightWheelDistance) / 2.0;
-    }
-
-    // Stop the motors
-    leftMotor.stop();
-    rightMotor.stop();
+    leftMotor.setSpeed(velocity);
+    rightMotor.setSpeed(-velocity);
 }
 
-void moveBackward(double distance) {
-    // Set motor speeds for backward motion
-    leftMotor.setSpeed(100);
-    rightMotor.setSpeed(100);
-    leftMotor.setDirection(false);
-    rightMotor.setDirection(false);
+// void moveBackward(double distance) {
+//     // Set motor speeds for backward motion
+//     leftMotor.setSpeed(100);
+//     rightMotor.setSpeed(100);
+//     leftMotor.setDirection(false);
+//     rightMotor.setDirection(false);
 
     // Move the robot the desired distance
-    double targetDistance = distance;
-    while (targetDistance > 0) {
-        updateOdometry();
-        targetDistance -= fabs(leftWheelDistance + rightWheelDistance) / 2.0;
-    }
+//     double targetDistance = distance;
+//     while (targetDistance > 0) {
+//         updateOdometry();
+//         targetDistance -= fabs(leftWheelDistance + rightWheelDistance) / 2.0;
+//     }
 
-    // Stop the motors
-    leftMotor.stop();
-    rightMotor.stop();
-}
+//     // Stop the motors
+//     leftMotor.stop();
+//     rightMotor.stop();
+// }
 
 void rotate(double targetAngle) {
-    // Calculate the angle difference and determine the direction of rotation
-    double currentAngle = theta;
-    double angleDiff = targetAngle - currentAngle;
-
-    // Normalize the angle difference to the range [-pi, pi)
-    if (angleDiff > M_PI) {
-        angleDiff -= 2 * M_PI;
-    } else if (angleDiff < -M_PI) {
-        angleDiff += 2 * M_PI;
-    }
-
-    // Determine the direction of rotation
-    bool turnRight = (angleDiff >= 0);
-
-    // Rotate the robot to the target angle
-    leftMotor.setSpeed(100);
-    rightMotor.setSpeed(100);
-
-    if (turnRight) {
-        leftMotor.setDirection(true);
-        rightMotor.setDirection(false);
-    } else {
-        leftMotor.setDirection(false);
-        rightMotor.setDirection(true);
-    }
-
-    double targetAngleDiff = fabs(angleDiff);
-    while (targetAngleDiff > 0.01) {
-        updateOdometry();
-        targetAngleDiff -= fabs(rightWheelDistance - leftWheelDistance) / WHEEL_TRACK;
-    }
-
-    // Stop the motors
-    leftMotor.stop();
-    rightMotor.stop();
+    leftMotor.setSpeed(velocity);
+    rightMotor.setSpeed(velocity);
 }
 
 void orientToAngle(double targetAngle) {
@@ -160,12 +125,12 @@ double setpoint = 0;           // Desired value (end location - static value)
 double current_pos = 0;        // Actual value (as the robot is moving, NOT the start point - dynamic value)
 double error = 0;
 double inv_error = 0;
-double output_velocity = 0;         // PID output speed
+double velocity = 0;         // PID output speed
 double velocity = 0;                // Robot's actual speed
 long double e = 2.71828182846;      // e for exponential curve
 
 // Initialize dynamic variables
-int max_speed = 250;     // Maximum speed the robot is at before slowing down
+int max_speed = 255;     // Maximum speed the robot is at before slowing down
 int slowing_dist = 2;    // Robot will start to slow down when it reaches this distance from the setpoint
                          // (In the future, will want to make this a function of our current velocity)
 
@@ -186,12 +151,12 @@ void updatePID() {
     // Calculate the derivative of the error (goal is to stop at setpoint)
     if (error <= slowing_dist) {
         // Slow to a stop
-        //output_velocity = (error * max_speed) / slowing_dist;      // Linearly
-        output_velocity = max_speed - max_speed * pow(e, (error * inv_error));    // Exponentially (better)
+        //velocity = (error * max_speed) / slowing_dist;      // Linearly
+        velocity = max_speed - max_speed * pow(e, (error * inv_error));    // Exponentially (better)
     }
     else {
         // Maintain constant speed
-        output_velocity = max_speed;
+        velocity = max_speed;
     }
 }
 
@@ -199,8 +164,8 @@ void updatePID() {
 // Define states as an enumeration
 typedef enum {
     STOPPED = 0,
-    DRIVING = 1,
-    SPINNING = 2
+    DRIVING = 1,  // Rotating
+    SPINNING = 2  // Going forward
 } RobotState;
 
 // Current state of the robot
@@ -228,7 +193,7 @@ void update_rotation_PID() {
 
 void update_driving_PID() {
     // Update driving based on PID control
-    moveForward(current_pos);  // Move forward to 'current_pos' as updated by PID
+    move(current_pos);  // Move forward to 'current_pos' as updated by PID
 }
 
 void do_nothing() {
