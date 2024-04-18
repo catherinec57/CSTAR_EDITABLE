@@ -61,64 +61,152 @@ void loop() {
   // read from serial, if there is 
   Serial.println("looping...");
   if (SwSerial.available()) {
+    // read from SwSerial until \n is seen, store in String dta
+    String data = SwSerial.readStringUntil('\n');    
     // save data into variable
-    char data = SwSerial.readLine();
+    // String data = SwSerial.read();
     Serial.println(data);
-    // process the data, if "ROTATE"
-    if (data == 'R, CW') {
-      Serial.println("Rotating motor...");
-      int start = millis();
-      Serial.println(start);
-      analogWrite(MOTOR1_IN1, 200);
-        analogWrite(MOTOR1_IN2, 0);
-        analogWrite(MOTOR2_IN1, 0);
-        analogWrite(MOTOR2_IN2, 200);
-      while (millis() - start < 2000) {
-        int x = 0;
-      }
-      analogWrite(MOTOR1_IN1, 0);
-      analogWrite(MOTOR1_IN2, 0);
-      analogWrite(MOTOR2_IN2, 0);
-      analogWrite(MOTOR2_IN1, 0);
-    }
-    else if (data == 'R, CCW') {
-      Serial.println("Driving Motor");
-      int start = millis();
-      Serial.println(start);
-      analogWrite(MOTOR1_IN1, 200);
-      analogWrite(MOTOR1_IN2, 0);
-      analogWrite(MOTOR2_IN2, 200);
-      analogWrite(MOTOR2_IN1, 0);
-      while (millis() - start < 2000) {
-        int x = 0;
-      }
-      analogWrite(MOTOR1_IN1, 0);
-      analogWrite(MOTOR1_IN2, 0);
-      analogWrite(MOTOR2_IN2, 0);
-      analogWrite(MOTOR2_IN1, 0);
-    }
-    else if (data == 'F') {
-      Serial.println("Driving Motor");
-      int start = millis();
-      Serial.println(start);
-      analogWrite(MOTOR1_IN1, 0);
-      analogWrite(MOTOR1_IN2, 200);
-      analogWrite(MOTOR2_IN2, 0);
-      analogWrite(MOTOR2_IN1, 200);
-      while (millis() - start < 2000) {
-        int x = 0;
-      }
-      analogWrite(MOTOR1_IN1, 0);
-      analogWrite(MOTOR1_IN2, 0);
-      analogWrite(MOTOR2_IN2, 0);
-      analogWrite(MOTOR2_IN1, 0);
-    }
+    // separate string data into 4 separate string variables using a comma as a delimiter
+
+    int commaIndex = data.indexOf(',');
+    String command = data.substring(0, commaIndex);
+    data = data.substring(commaIndex + 1);
+    commaIndex = data.indexOf(',');
+    String direction = data.substring(0, commaIndex);
+    data = data.substring(commaIndex + 1);
+    commaIndex = data.indexOf(',');
+    String velocity = data.substring(0, commaIndex);
+    String time = data.substring(commaIndex + 1);
+
+
+    // String command = data.substr(0, data.find(','));
+    // String direction = data.substr(data.find(',') + 1);
+    // String velocity = data.substr(data.find(',') + 1);
+    // String time = data.substr(data.find(',') + 1);
+    // Serial.println(command);
+    // Serial.println(direction);
+    // Serial.println(velocity);
+    // Serial.println(time);
+    int velocityInt = atoi(velocity.c_str());
+    int timeInt = atoi(time.c_str());
+    timeInt = timeInt * 1000;
+
+          // process the data, if "ROTATE"
+          if (command.c_str() == 'R') {
+            if (direction.c_str() == 'CW') {
+              Serial.println("Rotating motor clockwise...");
+              int start = millis();
+              Serial.println(start);
+              while (millis() - start < timeInt) {
+                analogWrite(MOTOR1_IN1, velocityInt);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, velocityInt);
+              }
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+            } else {
+              Serial.println("Rotating motor counterclockwise...");
+              int start = millis();
+              Serial.println(start);
+              while (millis() - start < timeInt) {
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, velocityInt);
+                analogWrite(MOTOR1_IN1, velocityInt);
+                analogWrite(MOTOR1_IN1, 0);
+              }
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+              analogWrite(MOTOR1_IN1, 0);
+            }
+          } else if {
+            if (command.c_str() == 'M') {
+              if (direction == 'F') {
+                Serial.println("Driving motor forward...");
+                int start = millis();
+                Serial.println(start);
+                while (millis() - start < timeInt) {
+                  analogWrite(MOTOR1_IN1, 0);
+                  analogWrite(MOTOR1_IN1, velocityInt);
+                  analogWrite(MOTOR1_IN1, velocityInt);
+                  analogWrite(MOTOR1_IN1, 0);
+                }
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+              } else {
+                Serial.println("Driving motor backward...");
+                int start = millis();
+                Serial.println(start);
+                while (millis() - start < timeInt) {
+                  analogWrite(MOTOR1_IN1, velocityInt);
+                  analogWrite(MOTOR1_IN1, 0);
+                  analogWrite(MOTOR1_IN1, 0);
+                  analogWrite(MOTOR1_IN1, velocityInt);
+                }
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+                analogWrite(MOTOR1_IN1, 0);
+            }
+          }
+        }
+  //   //   int start = millis();
+  //   //   Serial.println(start);
+  //   //   analogWrite(MOTOR1_IN1, 200);
+  //   //     analogWrite(MOTOR1_IN2, 0);
+  //   //     analogWrite(MOTOR2_IN1, 0);
+  //   //     analogWrite(MOTOR2_IN2, 200);
+  //   //   while (millis() - start < 2000) {
+  //   //     int x = 0;
+  //   //   }
+  //   //   analogWrite(MOTOR1_IN1, 0);
+  //   //   analogWrite(MOTOR1_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN1, 0);
+  //   // }
+  //   // else if (data == 'R, CCW') {
+  //   //   Serial.println("Driving Motor");
+  //   //   int start = millis();
+  //   //   Serial.println(start);
+  //   //   analogWrite(MOTOR1_IN1, 200);
+  //   //   analogWrite(MOTOR1_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN2, 200);
+  //   //   analogWrite(MOTOR2_IN1, 0);
+  //   //   while (millis() - start < 2000) {
+  //   //     int x = 0;
+  //   //   }
+  //   //   analogWrite(MOTOR1_IN1, 0);
+  //   //   analogWrite(MOTOR1_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN1, 0);
+  //   // }
+  //   // else if (data == 'F') {
+  //   //   Serial.println("Driving Motor");
+  //   //   int start = millis();
+  //   //   Serial.println(start);
+  //   //   analogWrite(MOTOR1_IN1, 0);
+  //   //   analogWrite(MOTOR1_IN2, 200);
+  //   //   analogWrite(MOTOR2_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN1, 200);
+  //   //   while (millis() - start < 2000) {
+  //   //     int x = 0;
+  //   //   }
+  //   //   analogWrite(MOTOR1_IN1, 0);
+  //   //   analogWrite(MOTOR1_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN2, 0);
+  //   //   analogWrite(MOTOR2_IN1, 0);
+  //   // }
     
-  }
+  // }
   analogWrite(MOTOR1_IN1, 0);
-  analogWrite(MOTOR1_IN2, 200);
+  analogWrite(MOTOR1_IN2, 0);
   analogWrite(MOTOR2_IN2, 0);
-  analogWrite(MOTOR2_IN1, 200);
+  analogWrite(MOTOR2_IN1, 0);
       
 
 }
