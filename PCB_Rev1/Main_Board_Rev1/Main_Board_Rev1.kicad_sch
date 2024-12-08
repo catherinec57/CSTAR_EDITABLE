@@ -1,5 +1,203 @@
-(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0")
-  (paper "A4")
-  (lib_symbols)
-  (symbol_instances)
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "8f5a23de-a1fa-4202-92fb-c2ac3de0338c")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 21.59 105.41)
+		(size 44.45 45.085)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0ea4e72d-54a3-4446-a173-a8fc45c421fe")
+		(property "Sheetname" "CSTAR-Drive"
+			(at 21.59 104.6984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cstar-drive.kicad_sch"
+			(at 21.59 151.0796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_Board_Rev1"
+				(path "/8f5a23de-a1fa-4202-92fb-c2ac3de0338c"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 30.48)
+		(size 44.45 43.815)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4da50182-4bfb-4740-9f93-3f86bef2b2e8")
+		(property "Sheetname" "CSTAR-Lidar"
+			(at 215.9 29.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cstar-lidar.kicad_sch"
+			(at 215.9 74.8796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_Board_Rev1"
+				(path "/8f5a23de-a1fa-4202-92fb-c2ac3de0338c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 106.68 129.54)
+		(size 44.45 42.545)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "87cbe485-412b-450f-a6d2-0d74a6238e69")
+		(property "Sheetname" "CSTAR-Power"
+			(at 106.68 128.8284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cstar-power.kicad_sch"
+			(at 106.68 172.6696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_Board_Rev1"
+				(path "/8f5a23de-a1fa-4202-92fb-c2ac3de0338c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 21.59 26.67)
+		(size 51.435 53.34)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "985328a3-4662-4f3a-8cff-b03fc4b452cf")
+		(property "Sheetname" "CSTAR-Audio"
+			(at 21.59 25.9584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cstar-audio.kicad_sch"
+			(at 21.59 80.5946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_Board_Rev1"
+				(path "/8f5a23de-a1fa-4202-92fb-c2ac3de0338c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 123.19)
+		(size 34.925 27.305)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9a9c2aab-15db-457a-a1a3-5bc6a825b752")
+		(property "Sheetname" "CSTAR-IO"
+			(at 215.9 122.4784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cstar-io.kicad_sch"
+			(at 215.9 151.0796 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Main_Board_Rev1"
+				(path "/8f5a23de-a1fa-4202-92fb-c2ac3de0338c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )
