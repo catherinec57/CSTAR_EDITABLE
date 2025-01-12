@@ -5,4 +5,16 @@
 	(uuid "66367edb-165d-4a25-a74a-09396f589af0")
 	(paper "A4")
 	(lib_symbols)
+	(text "Power 24V Battery\n"
+		(exclude_from_sim no)
+		(at 135.255 -6.35 0)
+		(effects
+			(font
+				(size 6 6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "82220774-1744-4c4a-b627-0d1d47c81c0d")
+	)
 )
