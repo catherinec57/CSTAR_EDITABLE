@@ -2790,7 +2790,7 @@
 		)
 		(uuid "00595a4e-d711-436a-acb1-657bd1640d34")
 	)
-	(text "RGB LED Functionality: ROBOT STATE INDICATOR\n- RGB share Anode with individual Cathode, hence shared 5V and  individual connections.\n- Meaning this is one LED package that can display all three colors (red, green, blue) by controlling the current through the three internal segments.\n- Green = running\n- Blue = idle\n- Red = stopped\n- Resistor included in Diode"
+	(text "RGB LED Functionality: ROBOT STATE INDICATOR\n- RGB share Anode with individual Cathode, hence shared 5V and  individual connections.\n- Meaning this is one LED package that can display all three colors (red, green, blue) by controlling the current through the three internal segments.\n- Green = running\n- Blue = idle\n- Red = error\n- Resistor included in Diode"
 		(exclude_from_sim no)
 		(at 30.988 161.29 0)
 		(effects
